@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Attribute Selector Test</title>
+    <style>
+        /* Selects elements with data-lang attribute starting with 'en' or exactly 'en' */
+        [data-lang|="en"] {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <p data-lang="en">This is in English.</p>
+   <p data-lang="en-US">This is in en-US English.</p>
+   <p data-lang="en_US">This is in en_US English.</p>
+   <p data-lang="fr">This is in French.</p>
+</body>
+</html>

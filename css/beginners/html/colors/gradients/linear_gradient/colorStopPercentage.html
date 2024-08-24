@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Linear Gradient Directions</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px black;
+        }
+        .to-top-stop-25 {
+            background: linear-gradient(to top, red 25%, blue);
+        }
+        .to-top-stop-50 {
+            background: linear-gradient(to top, red 50%, blue);
+        }
+        .to-top-stop-75 {
+            background: linear-gradient(to top, red 75%, blue);
+        }
+        .to-top-stop-90 {
+            background: linear-gradient(to top, red 90%, blue 90%);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box to-top-stop-25">to top, red 25%, blue</div>
+    <div class="box to-top-stop-50">to top, red 50%, blue</div>
+    <div class="box to-top-stop-75">to top, red 75%, blue</div>
+    <div class="box to-top-stop-90">to top, red 90%, blue</div>
+</body>
+</html>

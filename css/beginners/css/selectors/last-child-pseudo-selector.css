@@ -1,0 +1,4 @@
+.item-list li:last-child {
+    font-style: italic;
+    color: red;
+}

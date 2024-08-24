@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .box1 {
+            background-color: rgba(0, 0, 255, 1); /* Fully opaque blue */
+        }
+        .box2 {
+            background-color: rgba(0, 0, 255, 0.7); /* 70% opaque blue */
+        }
+        .box3 {
+            background-color: rgba(0, 0, 255, 0.5); /* 50% opaque blue */
+        }
+        .box4 {
+            background-color: rgba(0, 0, 255, 0.3); /* 30% opaque blue */
+        }
+        .box5 {
+            background-color: rgba(0, 0, 255, 0.1); /* 10% opaque blue */
+        }
+        .box6 {
+            background-color: rgba(0, 0, 255, 0); /* 10% opaque blue */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box box1">Opacity 1.0</div>
+    <div class="box box2">Opacity 0.7</div>
+    <div class="box box3">Opacity 0.5</div>
+    <div class="box box4">Opacity 0.3</div>
+    <div class="box box5">Opacity 0.1</div>
+    <div class="box box6">Opacity 0</div>
+</body>
+</html>
