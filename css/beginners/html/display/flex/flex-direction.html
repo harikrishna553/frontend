@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .title{
+            background-color: lightgray;
+            color: black;
+            font-size: 25px;
+            margin: 10px;
+        }
+
+        .row-direction-container {
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .row-reverse-direction-container {
+            display: flex;
+            flex-direction: row-reverse;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .column-direction-container {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .column-reverse-direction-container {
+            display: flex;
+            flex-direction: column-reverse;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .item {
+            background-color: deepskyblue;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="title">flex-direction: row</h1>
+    <div class="row-direction-container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1 class="title">flex-direction: row-reverse</h1>
+    <div class="row-reverse-direction-container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1 class="title">flex-direction: column</h1>
+    <div class="column-direction-container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1 class="title">flex-direction: column-reverse</h1>
+    <div class="column-reverse-direction-container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+</body>
+</html>
