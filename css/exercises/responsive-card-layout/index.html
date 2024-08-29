@@ -1,0 +1,123 @@
+<html>
+	<head>
+		<title>Responsive Card Layout</title>
+
+		<style>
+			.container{
+				display : flex;
+				flex-wrap: wrap;
+				gap: 20px;
+				
+			}
+
+			.card{
+				background-color: white;
+				flex: 1 1 calc(30% - 20px); /* Default to 3 columns, considering gap */
+				background-color: rgb(250, 250, 250);
+				border: 1px solid black;
+				margin-right: 30px;
+				margin-left: 30px;
+			}
+
+			.card-image{
+				height: 60%;
+				width: 80%;
+				margin: 10px;
+			}
+
+			.card-title{
+				font-weight: bold;
+				font-size: 1.5em;
+				margin-left: 5px;
+			}
+
+			.card-description{
+				font-family: "Times New Roman", Times, serif; 
+			}
+
+			.card:hover{
+				 transform: scale(1.05) rotate(5deg);
+			}
+
+			p{
+				margin-top: 5px;
+				text-align: left;
+			}
+
+			/* Media Queries for responsiveness */
+
+			/* For medium-sized screens (e.g., tablets) */
+			@media (max-width: 992px) {
+		    	.card {
+		       	 flex: 1 1 calc(50% - 40px); /* 2 columns with gap consideration */
+		    	}
+			}
+
+			/* For small screens (e.g., mobile phones) */
+			@media (max-width: 600px) {
+			    .card {
+			        flex: 1 1 100%; /* 1 column */
+			    }
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+
+			<div class="card">
+    			<img src="elephant.jpg" alt="Elephant Image" class="card-image" />
+    			<div class="card-content">
+        			<h2 class="card-title">Elephant</h2>
+        			<p class="card-description">
+            			A large, land-dwelling mammal known for its trunk, tusks, and great size. Elephants are social animals that live in herds and are found in Africa and Asia.
+        			</p>
+    			</div>
+			</div>
+
+			<div class="card">
+    			<img src="tiger.jpg" alt="Tiger Image" class="card-image" />
+    			<div class="card-content">
+        			<h2 class="card-title">Tiger</h2>
+        			<p class="card-description">
+            			A large, predatory cat with distinctive orange and black stripes. Tigers are solitary animals that live in forests and grasslands and are found in Asia.
+        			</p>
+    			</div>
+			</div>
+
+			<div class="card">
+    			<img src="dog.jpg" alt="Dog Image" class="card-image" />
+    			<div class="card-content">
+        			<h2 class="card-title">Tiger</h2>
+        			<p class="card-description">
+            			A domesticated mammal known for its loyalty and companionship. Dogs come in various breeds and sizes and are often kept as pets.
+        			</p>
+    			</div>
+			</div>
+
+			<div class="card">
+    			<img src="monkey.jpg" alt="Monkey Image" class="card-image" />
+    			<div class="card-content">
+        			<h2 class="card-title">Tiger</h2>
+        			<p class="card-description">
+            			A small, furry primate known for its agility and intelligence. Monkeys are social animals that live in groups and are found in tropical and subtropical regions around the world.
+        			</p>
+    			</div>
+			</div>
+
+			<div class="card">
+    			<img src="bear.jpg" alt="Bear Image" class="card-image" />
+    			<div class="card-content">
+        			<h2 class="card-title">Tiger</h2>
+        			<p class="card-description">
+            			A large, furry mammal known for its strength and hibernation. Bears are omnivores that eat a variety of food, including meat, fish, and berries.
+        			</p>
+    			</div>
+			</div>
+
+
+	
+
+		</div>
+	</body>
+</html>
