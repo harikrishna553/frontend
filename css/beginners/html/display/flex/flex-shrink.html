@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grow Example</title>
+    <style>
+        .container {
+            display: flex;
+            width: 90vw;
+            margin: 20px;
+            background-color: black;
+        }
+
+        .item {
+            flex-basis: 300px; /* Default size of each item */
+            flex-shrink: 1;    /* Default shrink value */
+            background-color: lightblue;
+            text-align: center;
+            border: 1px solid red;
+        }
+
+        .item1 {
+            flex-shrink: 1;
+        }
+
+        .item2 {
+            flex-shrink: 2;
+        }
+
+        .item3 {
+            flex-shrink: 3;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item item1">Item 1</div>
+        <div class="item item2">Item 2</div>
+        <div class="item item3">Item 3</div>
+    </div>
+
+
+</body>
+</html>
