@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition Timing Function Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            background-color: lightcoral;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition-property: background-color;
+            transition-duration: 2s;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .box:hover {
+            background-color: lightseagreen;
+        }
+
+        /* Different transition-timing-functions for each box */
+        .linear {
+            transition-timing-function: linear;
+        }
+
+        .ease {
+            transition-timing-function: ease;
+        }
+
+        .ease-in {
+            transition-timing-function: ease-in;
+        }
+
+        .ease-out {
+            transition-timing-function: ease-out;
+        }
+
+        .ease-in-out {
+            transition-timing-function: ease-in-out;
+        }
+
+        .step-start {
+            transition-timing-function: step-start;
+        }
+
+        .step-end {
+            transition-timing-function: step-end;
+        }
+
+        .steps {
+            transition-timing-function: steps(4, end);
+        }
+
+        .cubic-bezier {
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box linear">linear</div>
+    <div class="box ease">ease</div>
+    <div class="box ease-in">ease-in</div>
+    <div class="box ease-out">ease-out</div>
+    <div class="box ease-in-out">ease-in-out</div>
+    <div class="box step-start">step-start</div>
+    <div class="box step-end">step-end</div>
+    <div class="box steps">steps(4, end)</div>
+    <div class="box cubic-bezier">cubic-bezier(0.25, 0.1, 0.25, 1.0)</div>
+</body>
+</html>
