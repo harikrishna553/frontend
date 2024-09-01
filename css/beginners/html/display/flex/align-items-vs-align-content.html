@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flexbox: align-items vs align-content</title>
+  <style>
+    .container {
+      display: flex;
+      height: 30vh;
+      width: 30vw;
+      border: 1px solid black;
+      flex-wrap: wrap;
+    }
+
+    .item {
+      height: 100px;
+      width: 150px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .align-items-center {
+      align-items: center;
+    }
+
+    .align-content-center {
+      align-content: center;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Flexbox: align-items vs align-content</h1>
+
+  <h2>align-items: center;</h2>
+
+  <div class="container align-items-center">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+
+  <h2>align-content: center;</h2>
+  
+  <div class="container align-content-center">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+
+</body>
+</html>
