@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyperlink Demo</title>
+
+    <style>
+        div {
+            margin: 10px;
+        }
+
+        /* Basic anchor link style */
+        a {
+            background-color: lightgray;
+            color: #3498db; /* Default link color */
+            text-decoration: none; /* Removes the underline */
+            font-weight: 500; /* Makes the text slightly bold */
+            transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effects */
+        }
+
+        /* Hover state: changes when the user hovers over the link */
+        a:hover {
+            color: #2c3e50; /* Darker shade on hover */
+            text-decoration: underline; /* Adds underline on hover for emphasis */
+        }
+
+        /* Active state: changes when the link is being clicked */
+        a:active {
+            color: #2980b9; /* Slightly different color to indicate click */
+        }
+
+        /* Visited state: changes for links that have been visited */
+        a:visited {
+            color: #8e44ad; /* Different color for visited links */
+        }
+
+        /* Focus state: changes when the link is focused via keyboard or mouse click */
+        a:focus {
+            outline: 2px solid #2980b9; /* Adds a blue outline for accessibility */
+            outline-offset: 2px; /* Moves the outline slightly away from the text */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- This link will navigate to https://self-learning-java-tutorial.blogspot.com when clicked. -->
+    <div><a href="https://self-learning-java-tutorial.blogspot.com">Programming Languages Tutorial</a></div>
+
+    <!-- This link will open the https://self-learning-java-tutorial.blogspot.com website in a new tab or window. -->
+    <div><a href="https://self-learning-java-tutorial.blogspot.com" target="_blank">Programming Languages Tutorial (Open in new tab)</a></div>
+
+    <!-- Link with tooltip -->
+    <div><a href="https://self-learning-java-tutorial.blogspot.com" title="Click to visit tutorials website">Programming Languages Tutorial</a></div>
+
+    <!-- This link will download the apache-licence.pdf file instead of navigating to it. -->
+    <div><a href="files/apache-licence.pdf" download="apache-licence.pdf">Download Apache Licence PDF</a></div>
+
+    <!-- Link to an email address -->
+    <div><a href="mailto:someone@example.com">Send Email</a></div>
+
+    <!-- Link to phone number -->
+    <div><a href="tel:+1234567890">Call Us Now</a></div>
+
+    <!-- Link to a page with in the same server -->
+    <div><a href="about-me.html">About Me</a></div>
+
+</body>
+</html>
