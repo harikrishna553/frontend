@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Head, Body and Footer Example</title>
+    <style>
+        table {
+            width: 50vw;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        caption {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        tfoot > tr > td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Head, Body and Footer Demo</h1>
+
+    <table>
+
+        <caption>Employees Of ABC Corporation</caption>
+
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Occupation</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <tr>
+            <td>Rama Krishna</td>
+            <td>36</td>
+            <td>Principle Engineer</td>
+          </tr>
+          <tr>
+            <td>Abhishek Ramesh</td>
+            <td>32</td>
+            <td>Frontend Engineer</td>
+          </tr>
+        </tbody>
+      
+        <tfoot>
+          <tr>
+            <td colspan="3">Total Employees are <mark>2</mark>, and the average age is <mark>34</mark></td>
+          </tr>
+        </tfoot>
+
+      </table>
+      
+</body>
+</html>
