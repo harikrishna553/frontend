@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation Example</title>
+</head>
+<body>
+    <form action="https://httpbin.org/post" method="POST">
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" 
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+               placeholder="example@domain.com" 
+               required><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <small>Enter a valid email like example@domain.com</small><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
