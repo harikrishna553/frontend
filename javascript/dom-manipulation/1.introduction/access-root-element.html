@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Element Example</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        .box{
+            width: 100px;
+            height: 90vh;
+            background-color: gray;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+
+    <div class="box">
+
+    </div>
+    <button onclick="scrollToTop()">Scroll to Top</button>
+
+    <script>
+        function scrollToTop() {
+            // Scrolls the document to the top by accessing document.documentElement
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Get the scroll height of the document
+        console.log("Scroll Height: " + document.documentElement.scrollHeight);
+    </script>
+</body>
+</html>

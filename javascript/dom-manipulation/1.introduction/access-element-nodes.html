@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Children Property Example</title>
+  </head>
+  <body>
+    <div id="parent">
+      <p>This is a paragraph.</p>
+      <span>This is a span.</span>
+      <!-- This is a comment -->
+      This is some text outside elements.
+    </div>
+    <br><br>
+
+    <button onclick="printChildNodes()">Print Child Nodes</button>
+
+    <script>
+      function printChildNodes() {
+        let divTag = document.getElementById("parent");
+        if(divTag === undefined || divTag === null){
+            return;
+        }
+        let childNodes = divTag.children;
+        if(childNodes === undefined || childNodes === null){
+            return;
+        }
+        console.log(childNodes);
+        let resultString = ""; // Initialize an empty string to store the result
+
+        for (let i = 0; i < childNodes.length; i++){
+          resultString += childNodes[i].outerHTML;
+          resultString+="\n";
+        }
+
+        alert(resultString);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Change Body theme</title>
+    <meta charset="UTF-8" />
+
+    <style>
+        .grayTheme {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <button id="modifyTheme">Modify Theme</button>
+
+    <script>
+      function modifyTheme() {
+        console.log('Setting the class to grayTheme');
+
+        document.body.setAttribute('class', 'grayTheme');
+        document.getElementById('modifyTheme').hidden=true;
+
+      }
+
+      // Add an event listener to the button to trigger the function on click
+      document
+        .getElementById("modifyTheme")
+        .addEventListener("click", modifyTheme);
+    </script>
+  </body>
+</html>

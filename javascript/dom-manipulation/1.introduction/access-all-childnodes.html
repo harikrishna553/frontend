@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChildNodes Property Example</title>
+  </head>
+  <body>
+    <div id="parent">
+      <p>This is a paragraph.</p>
+      <span>This is a span.</span>
+      <!-- This is a comment -->
+      This is some text outside elements.
+    </div>
+    <br><br>
+
+    <button onclick="printChildNodes()">Print Child Nodes</button>
+
+    <script>
+      function printChildNodes() {
+        let divTag = document.getElementById("parent");
+        if(divTag === undefined || divTag === null){
+            return;
+        }
+        let childNodes = divTag.childNodes;
+        if(childNodes === undefined || childNodes === null){
+            return;
+        }
+        let resultString = ""; // Initialize an empty string to store the result
+
+        childNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            resultString += node.outerHTML; // Add element node as a string
+          } else if (node.nodeType === Node.TEXT_NODE) {
+            resultString += node.textContent.trim(); // Add text node as a string (trimmed)
+          } else if (node.nodeType === Node.COMMENT_NODE) {
+            resultString += `<!-- ${node.nodeValue} -->`; // Add comment node as a string
+          }
+          
+          resultString+="\n";
+        });
+
+        alert(resultString);
+      }
+    </script>
+  </body>
+</html>

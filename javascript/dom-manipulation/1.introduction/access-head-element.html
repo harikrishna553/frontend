@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Example Document</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="This is a sample page." />
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <button id="modifyTitle">Modify Title</button>
+
+    <script>
+      // Function to modify the <head> content
+      function modifyHeadContent() {
+        // Modify the title dynamically
+        document.head.querySelector("title").text = "New Document Title";
+
+        console.log("Head content modified.");
+      }
+
+      // Add an event listener to the button to trigger the function on click
+      document
+        .getElementById("modifyTitle")
+        .addEventListener("click", modifyHeadContent);
+    </script>
+  </body>
+</html>

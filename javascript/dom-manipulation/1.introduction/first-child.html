@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FirstChild Property Example</title>
+  </head>
+  <body>
+    <div id="parent">
+      <p>This is a paragraph.</p>
+      <span>This is a span.</span>
+      <!-- This is a comment -->
+      This is some text outside elements.
+    </div>
+    <br><br>
+
+    <button onclick="print()">Print Child Nodes</button>
+
+    <script>
+      function print() {
+        let divTag = document.getElementById("parent");
+        if(divTag === undefined || divTag === null){
+            return;
+        }
+        let firstChild = divTag.firstChild;
+        if(firstChild === undefined || firstChild === null){
+            return;
+        }
+        let resultString = ""; // Initialize an empty string to store the result
+
+        do{
+        if (firstChild.nodeType === Node.ELEMENT_NODE) {
+            resultString += firstChild.outerHTML; // Add element node as a string
+          } else if (firstChild.nodeType === Node.TEXT_NODE) {
+            resultString += firstChild.textContent.trim(); // Add text node as a string (trimmed)
+          } else if (firstChild.nodeType === Node.COMMENT_NODE) {
+            resultString += `<!-- ${firstChild.nodeValue} -->`; // Add comment node as a string
+          }
+          
+          resultString+="\n";
+
+          firstChild = firstChild.nextSibling;
+
+        }while(firstChild !== null);
+
+        alert(resultString);
+      }
+    </script>
+  </body>
+</html>
