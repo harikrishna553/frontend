@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GetElementsByTagName Example</title>
+  </head>
+  <body>
+    <div id="parent">
+      <p id="para1">This is a paragraph1.</p>
+      <span>This is a span.</span>
+      <p id="para1">This is a paragraph2.</p>
+    </div>
+    <br><br>
+
+    <button onclick="updateParagraphColor()">Update Paragraph background color</button>
+
+    <script>
+      function updateParagraphColor() {
+        let paraElements = document.getElementsByTagName("p");
+        
+        if(paraElements === null){
+            return
+        }
+
+        for(let para of paraElements){
+            para.style.fontWeight = "bold"
+            para.style.backgroundColor = 'lightblue';
+            para.style.border = "1px solid black"
+            para.style.width = "180px";
+        }
+
+      }
+    </script>
+  </body>
+</html>

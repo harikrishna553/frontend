@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QuerySelector Example</title>
+  </head>
+  <body>
+    <h1>My favorite fruits</h1>
+    <ol>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Grapes</li>
+    </ol>
+
+    <br /><br /><br />
+
+    <h1>My favorite places</h1>
+    <ul>
+      <li>Bangalore</li>
+      <li>Jaipur</li>
+      <li>Thiruvannamalai</li>
+    </ul>
+
+    <button id="applyStyleToFirstItem">Apply style to the first list item</button>
+    <button id="applyStyleToLastItem">Apply style to the last list item</button>
+
+    <script>
+      document.getElementById("applyStyleToFirstItem").onclick = function () {
+        let firstListItem = document.querySelector("li:first-child");
+        firstListItem.style.fontWeight = "bold";
+        firstListItem.style.fontSize = "1.5em";
+        firstListItem.style.color = "darkblue";
+      };
+
+      document.getElementById("applyStyleToLastItem").onclick = function () {
+        let lastListItem = document.querySelector("li:last-child");
+        lastListItem.style.fontWeight = "bold";
+        lastListItem.style.fontSize = "1.5em";
+        lastListItem.style.color = "darkblue";
+      };
+
+     
+    </script>
+  </body>
+</html>
