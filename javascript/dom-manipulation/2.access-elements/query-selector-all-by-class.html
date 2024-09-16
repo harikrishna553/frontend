@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QuerySelectorAll Example</title>
+    <style>
+      p {
+        margin-bottom: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="colored">
+      <p>I belong to the class 'colored'</p>
+    </div>
+
+    <div class="colored">
+      <p>I belong to the class 'colored'</p>
+    </div>
+
+    <div class="uncolored">
+      <p>I belong to the class 'uncolored'</p>
+    </div>
+    <br /><br />
+    <button id="querySelectorAllByClass">Query Selector by Class</button>
+
+    <script>
+      document.getElementById("querySelectorAllByClass").onclick = function () {
+        let matchedElements = document.querySelectorAll(".colored");
+
+        for (let div of matchedElements) {
+          div.style.fontWeight = "bold";
+          div.style.color = "darkblue";
+          div.style.width = "250px";
+          div.style.height = "100px";
+          div.style.backgroundColor = "lightgreen";
+          div.style.textAlign = "center";
+          div.style.paddingTop = "50px";
+          div.style.margin = "10px"
+        }
+      };
+    </script>
+  </body>
+</html>
