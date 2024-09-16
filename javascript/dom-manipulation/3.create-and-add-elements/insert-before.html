@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InsertBefore Example</title>
+  </head>
+  <body>
+    <div id="divToExperiment">
+      <p id="para1">This is a paragraph1.</p>
+
+      <p id="para3">This is a paragraph3.</p>
+    </div>
+
+    <button onclick="addNewParagraph()" id="myButton">Add New Paragraph</button>
+
+    <script>
+      function addNewParagraph() {
+        let divTag = document.getElementById("divToExperiment");
+
+        let paragraph = document.createElement("p");
+        paragraph.textContent = "This is a paragraph2.";
+       
+        let para3 = document.getElementById("para3");
+        divTag.insertBefore(paragraph, para3);
+
+        document.getElementById("myButton").hidden = true;
+      }
+    </script>
+  </body>
+</html>
