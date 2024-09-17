@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ClassList Property Example</title>
+
+    <style>
+      .class1 {
+        margin: 10px;
+      }
+
+      .class2 {
+        background-color: black;
+        color: white;
+        font-size: 1.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="class1">Css and DOM is fun to learn, Happy Learning........</p>
+
+    <button onclick="appendClass()" id="addClass2">
+      Add Style
+    </button>
+
+    <button onclick="removeClass()" id="addClass2">
+      Remove Style
+    </button>
+
+    <script>
+      function appendClass() {
+        let para = document.querySelector("p");
+        let clazz = para.getAttribute("class");
+
+        if (clazz == null) {
+          clazz = "class2";
+        } else {
+          clazz += " class2";
+        }
+
+        para.setAttribute("class", clazz);
+      }
+
+      function removeClass() {
+        let para = document.querySelector("p");
+        para.removeAttribute("class");
+      }
+    </script>
+  </body>
+</html>
