@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function UserRegistration() {
   const [myName, setUsername] = useState("");
   const [myEmail, setEmail] = useState("");
-  let [disableRegistration] = useState(true);
+  let [disableRegistration, setDisableRegistration] = useState(true);
 
   function registerUser(event) {
     event.preventDefault();
@@ -12,13 +12,18 @@ export default function UserRegistration() {
 
   function handleNameChange(event) {
     setUsername(event.target.value);
+    handleRegistraiton()
   }
 
   function handleEmailChange(event) {
     setEmail(event.target.value);
+    handleRegistraiton()
   }
 
-  disableRegistration = !myName || !myEmail;
+  
+  function handleRegistraiton(){
+    setDisableRegistration(!myName || !myEmail);
+  }
 
   return (
     <form method="POST" onSubmit={registerUser}>
