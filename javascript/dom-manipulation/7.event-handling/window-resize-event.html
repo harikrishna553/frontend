@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resize Event Listener Example</title>
+  </head>
+  <body>
+    <p>Hi, I am at position <span id="location"></span></p>
+
+    <script>
+      function updatePosition() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        let location = document.getElementById("location");
+        location.textContent = `(width : ${width}, height : ${height})`;
+      }
+
+      window.addEventListener("resize", updatePosition);
+    </script>
+  </body>
+</html>
