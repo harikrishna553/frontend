@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Toggle Button Example</title>
+
+    <style>
+        button{
+            margin: 10px;
+            background-color: lightgrey;
+        }
+    </style>
+  </head>
+  <body>
+
+    <button id="myButton">My Button</button> <br /><br />
+    <button id="toggle">Toggle</button>
+   
+    <script>
+        document.getElementById("toggle").addEventListener("click", (e) => {
+            const myButton = document.getElementById("myButton");
+            myButton.disabled = !myButton.disabled;
+        });
+    </script>
+
+  </body>
+</html>
