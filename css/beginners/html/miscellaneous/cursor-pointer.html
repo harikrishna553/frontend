@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursor Pointer Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        background-color: #f0f0f0;
+      }
+
+      /* Button Styles */
+      .btn {
+        background-color: #6164bc;
+        color: white;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 15px;
+      }
+
+      .btnWithCursor {
+        cursor: pointer; /* Changes cursor to pointer */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Interactive Elements Example</h1>
+    <button class="btnWithCursor btn">Cursor styled</button>
+    <button class="btn">Regular One</button>
+  </body>
+</html>
