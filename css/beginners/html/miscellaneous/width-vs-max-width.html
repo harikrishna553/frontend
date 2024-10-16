@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Width Vs Max-Width Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif; /* Clean, modern font */
+        background-color: #f5f5f5; /* Light gray background */
+        color: #333; /* Dark text color for contrast */
+        margin: 0; /* Reset default margins */
+        padding: 20px; /* Padding around the content */
+      }
+
+      /* Parent 1: 200px width */
+      #div1 {
+        width: 200px; /* Parent width is 200px */
+        height: 200px; /* Fixed height */
+        background-color: #4caf50; /* Green background */
+        display: flex; /* Flexbox for centering */
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        margin: 20px 0; /* Margin for spacing */
+        border-radius: 10px; /* Rounded corners */
+      }
+
+      /* Parent 2: 500px width */
+      #div2 {
+        width: 500px; /* Parent width is 500px */
+        height: 200px; /* Fixed height */
+        background-color: #2196f3; /* Blue background */
+        display: flex; /* Flexbox for centering */
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        margin: 20px 0; /* Margin for spacing */
+        border-radius: 10px; /* Rounded corners */
+      }
+
+      /* Child element */
+      .child {
+        width: 100%; /* Full width of parent */
+        max-height: 100px; /* Max height is 50% of parent height (200px) */
+        max-width: 250px; /* Child will not exceed 250px */
+        background-color: #ff5722; /* Orange background for child */
+        padding: 10px; /* Padding inside the child */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+        border-radius: 5px; /* Rounded corners */
+        display: flex; /* Flexbox for centering text */
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+      }
+
+      .child-more-width-than-parent {
+        width: 800px; /* Child width exceeds parent width */
+        background-color: #ff5722; /* Orange background for child */
+        max-height: 100px; /* Max height is 50% of parent height (200px) */
+      }
+
+      .child-overflow {
+        min-width: 800px; /* Child min-width exceeds parent width */
+        background-color: #ff5722; /* Orange background for child */
+        max-height: 100px; /* Max height is 50% of parent height (200px) */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Understanding Width and Max-Width</h1>
+
+    <p>
+      In this example, the parent container has a width of <code>200px</code>.
+      The child element is set to take up <code>100%</code> of the parent's
+      width, with a maximum width of <code>250px</code>. Therefore, the child
+      will fill the full width of the parent.
+    </p>
+    <div id="div1">
+      <div class="child">Child Element</div>
+    </div>
+
+    <p>
+      Here, the parent container has a width of <code>500px</code>. The child
+      element is again set to take <code>100%</code> of the parent's width but
+      will not exceed <code>250px</code>. Thus, the child will take up to
+      <code>250px</code> in width.
+    </p>
+    <div id="div2">
+      <div class="child">Child Element</div>
+    </div>
+
+    <p>
+      In this scenario, the parent has a width of <code>200px</code>, but the
+      child element is explicitly set to a width of <code>800px</code>. Since
+      this width exceeds that of the parent, it will stick to the parent's
+      boundaries unless managed by CSS.
+    </p>
+    <div id="div1">
+      <div class="child-more-width-than-parent">Child Element</div>
+    </div>
+
+    <p>
+      Lastly, the parent maintains a width of <code>200px</code>, while the
+      child has a <code>min-width</code> of <code>800px</code>. This ensures
+      that the child cannot shrink below <code>800px</code>, resulting in
+      overflow from the parent container.
+    </p>
+    <div id="div1">
+      <div class="child-overflow">Child Element</div>
+    </div>
+  </body>
+</html>
