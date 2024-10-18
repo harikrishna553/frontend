@@ -84,16 +84,24 @@ function App() {
           </Button>
         </Stack>
       </Stack>
-
       <Button variant="contained" fullWidth>
         Full Width button
       </Button>
-
+      <Box mt={2} /> {/* Adds vertical space (margin-top) */}
+      <Button variant="contained">Normal Button</Button>
       <Box mt={2} /> {/* Adds vertical space (margin-top) */}
 
-      <Button variant="contained">
-        Normal Button
+      <Button variant="contained" disableElevation sx = {
+        {
+          margin: "5px"
+        }
+      }>
+        Elevation Disabled
       </Button>
+      <Box mt={2} /> {/* Adds vertical space (margin-top) */}
+      <Button variant="contained" sx = {
+        {margin: "5px"}
+      }>Regular Button</Button>
     </>
   );
 }
