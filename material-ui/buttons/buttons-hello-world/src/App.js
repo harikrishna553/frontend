@@ -1,0 +1,61 @@
+import { Button, Stack, Typography } from "@mui/material";
+
+function App() {
+  return (
+    <Stack
+      spacing={2}
+      direction="column"
+      sx={{
+        margin: "20px",
+      }}
+    >
+      <Stack spacing={2} direction="row">
+        <Typography variant="h5" gutterBottom>
+          Variants
+        </Typography>
+        <Button>Text Button</Button>
+        <Button variant="contained">Contained Button</Button>
+        <Button variant="outlined">Outlined Button</Button>
+      </Stack>
+
+      <Stack spacing={5} direction="row">
+        <Typography variant="h5" gutterBottom>
+          Colored Buttons
+        </Typography>
+        <Button color="primary" variant="contained">
+          Primary Color
+        </Button>
+        <Button color="secondary" variant="contained">
+          Secondary Color
+        </Button>
+        <Button color="error" variant="contained">
+          Error Color
+        </Button>
+        <Button color="warning" variant="contained">
+          Warning Color
+        </Button>
+        <Button color="info" variant="contained">
+          Info Color
+        </Button>
+        <Button color="success" variant="contained">
+          Success Color
+        </Button>
+      </Stack>
+
+      <Stack display="block" spacing={2} direction="row">
+        <Typography variant="h5" gutterBottom>
+          Buttons by Size
+        </Typography>
+        <Button size="small" variant="contained">
+          small
+        </Button>
+        <Button variant="contained">Medium</Button>
+        <Button size="large" variant="contained">
+          Large
+        </Button>
+      </Stack>
+    </Stack>
+  );
+}
+
+export default App;
