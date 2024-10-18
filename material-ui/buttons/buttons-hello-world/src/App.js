@@ -54,6 +54,26 @@ function App() {
           Large
         </Button>
       </Stack>
+
+      <Stack direction="row">
+        <Typography variant="h5" gutterBottom>
+          Disabled Buttons
+        </Typography>
+
+        <Button disabled>Default Disabled button</Button>
+
+        <Button
+          variant="contained"
+          disabled
+          sx={{
+            backgroundColor: "grey.500", // Custom grey background
+            color: "white", // Custom text color
+            opacity: 0.7, // Custom opacity
+          }}
+        >
+          Custom Disabled Button
+        </Button>
+      </Stack>
     </Stack>
   );
 }
