@@ -74,6 +74,14 @@ function App() {
           Custom Disabled Button
         </Button>
       </Stack>
+
+      <Stack direction="row">
+        <Typography variant="h5">Model Button as Hyper Link</Typography>
+
+        <Button href="https://www.google.com/">
+          Click Here Top open Google Search Page
+        </Button>
+      </Stack>
     </Stack>
   );
 }
