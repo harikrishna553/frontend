@@ -1,4 +1,7 @@
-import { Button, Stack, Typography, Box } from "@mui/material";
+import { Button, Stack, Typography, Box, IconButton } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
+import AddAPhotoIcon from "@mui/icons-material/AddAPhoto";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 
 function App() {
   return (
@@ -90,18 +93,34 @@ function App() {
       <Box mt={2} /> {/* Adds vertical space (margin-top) */}
       <Button variant="contained">Normal Button</Button>
       <Box mt={2} /> {/* Adds vertical space (margin-top) */}
-
-      <Button variant="contained" disableElevation sx = {
-        {
-          margin: "5px"
-        }
-      }>
+      <Button
+        variant="contained"
+        disableElevation
+        sx={{
+          margin: "5px",
+        }}
+      >
         Elevation Disabled
       </Button>
       <Box mt={2} /> {/* Adds vertical space (margin-top) */}
-      <Button variant="contained" sx = {
-        {margin: "5px"}
-      }>Regular Button</Button>
+      <Button variant="contained" sx={{ margin: "5px" }}>
+        Regular Button
+      </Button>
+      <Box mt={2} /> {/* Adds vertical space (margin-top) */}
+      <Button>Button With Ripple Affect</Button>
+      <Box mt={2} /> {/* Adds vertical space (margin-top) */}
+      <Button disableRipple>Button Without Ripple Affect</Button>
+      <Box mt={2} /> {/* Adds vertical space (margin-top) */}
+      <Typography variant="h4">Icon Buttons</Typography>
+      <IconButton aria-label="delete">
+        <DeleteIcon />{" "}
+      </IconButton>
+      <IconButton aria-label="Add Photo">
+        <AddAPhotoIcon />
+      </IconButton>
+      <IconButton aria-label="Notification">
+        <NotificationsIcon />
+      </IconButton>
     </>
   );
 }
