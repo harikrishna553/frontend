@@ -9,7 +9,7 @@ function App() {
         flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: "flex-start",
-        gap: "100px" /* Adds 20px gap between both rows and columns */,
+        gap: "100px",
         columnGap: "100px",
       }}
     >
@@ -24,11 +24,7 @@ function App() {
         </ButtonGroup>
       </Stack>
 
-      <Stack
-        sx={{
-          marginTop: 5,
-        }}
-      >
+      <Stack>
         <Typography variant="h5" gutterBottom>
           Variant Demo
         </Typography>
@@ -76,11 +72,7 @@ function App() {
         </Stack>
       </Stack>
 
-      <Stack
-        sx={{
-          marginTop: 5,
-        }}
-      >
+      <Stack>
         <Typography variant="h5" gutterBottom>
           Set Secondary Color for the Button Group
         </Typography>
@@ -91,11 +83,7 @@ function App() {
         </ButtonGroup>
       </Stack>
 
-      <Stack
-        sx={{
-          marginTop: 5,
-        }}
-      >
+      <Stack>
         <Typography variant="h5" gutterBottom>
           Buttons By Size
         </Typography>
