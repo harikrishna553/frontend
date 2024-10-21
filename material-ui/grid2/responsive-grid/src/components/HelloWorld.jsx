@@ -25,24 +25,24 @@ function HelloWorld() {
       >
         Hello World Grid
       </Typography>
-      <Grid container spacing={2}>
-        <Grid size={8}>
+      <Grid container spacing={2} sx={{ border: "1px solid black" }}>
+        <Grid size={{ xs: 12, sm: 6, md: 8, lg: 4, xl: 2 }}>
           <Box sx={{ ...boxStyle, backgroundColor: "primary.light" }}>
-            size=8
+            Box 1
           </Box>
         </Grid>
-        <Grid size={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 8, lg: 4, xl: 2 }}>
           <Box sx={{ ...boxStyle, backgroundColor: "secondary.light" }}>
-            size=4
+            Box 2
           </Box>
         </Grid>
-        <Grid size={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 8, lg: 4, xl: 2 }}>
           <Box sx={{ ...boxStyle, backgroundColor: "success.light" }}>
-            size=4
+            Box 3
           </Box>
         </Grid>
-        <Grid size={8}>
-          <Box sx={{ ...boxStyle, backgroundColor: "error.light" }}>size=8</Box>
+        <Grid size={{ xs: 12, sm: 6, md: 8, lg: 4, xl: 2 }}>
+          <Box sx={{ ...boxStyle, backgroundColor: "error.light" }}>Box 4</Box>
         </Grid>
       </Grid>
     </Box>
