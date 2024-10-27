@@ -25,6 +25,10 @@
   margin: 10px;
   width: 90%; /* Make item full width of container */
   background-color: #b2d6f2;
+  min-height: 60px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
 }
 
 .accordionItem:hover {
@@ -33,13 +37,26 @@
 
 .accordionTitle {
   display: flex;
-  justify-content: space-between;
-  font-size: 1.2em;
-  font-weight: bold;
+  justify-content: space-between; /* Push items to opposite ends */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Ensure it takes full width of the parent */
+  padding: 10px; /* Optional: add padding for better spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.plusButton {
+  padding: 5px 10px; /* Add padding for better appearance */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Change cursor to pointer */
 }
 
 .accordionDescription {
   font-style: italic;
   font-size: 0.9em;
   transition: max-height 0.2s ease-out; /* Smooth height transition */
+  padding-bottom: 5px;
+  text-align: left;
 }

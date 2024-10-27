@@ -23,9 +23,10 @@ export default function Accordion({ data }) {
               }}
             >
               <div className="accordionTitle">
-                {item.title}
-
-                <span className="plusButton">+</span>
+                <div>
+                  {index + 1}. {item.title}
+                </div>
+                <div className="plusButton">+</div>
               </div>
 
               {selected === index ? (
