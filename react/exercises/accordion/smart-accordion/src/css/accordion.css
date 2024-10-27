@@ -28,7 +28,14 @@
   min-height: 60px;
   justify-content: center;
   align-items: center;
-  padding-left: 5px;
+}
+
+.accordionItem:nth-child(1){
+  margin-top: 20px;
+}
+
+.accordionItem:last-child{
+  margin-bottom: 20px;
 }
 
 .accordionItem:hover {
