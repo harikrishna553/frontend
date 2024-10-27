@@ -1,0 +1,45 @@
+.centered-item {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Full viewport height */
+  background-color: rgb(147, 145, 145);
+}
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 80%; /* Responsive width */
+  max-width: 600px; /* Limit maximum width */
+  margin: 20px auto; /* Centering container */
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.accordionItem {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 90%; /* Make item full width of container */
+  background-color: #b2d6f2;
+}
+
+.accordionItem:hover {
+  background-color: #a2c4e5; /* Light hover effect */
+}
+
+.accordionTitle {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.accordionDescription {
+  font-style: italic;
+  font-size: 0.9em;
+  transition: max-height 0.2s ease-out; /* Smooth height transition */
+}
