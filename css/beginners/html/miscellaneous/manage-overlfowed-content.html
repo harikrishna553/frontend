@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Data Table</title>
+    <style>
+      /* Container to center the table both horizontally and vertically */
+      .table-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full viewport height */
+      }
+
+      .scrollable-table {
+        width: 80%; /* Adjust width as needed */
+        max-height: 300px; /* Set a fixed height for overflow */
+        overflow-y: auto; /* Vertical scroll if content overflows */
+        overflow-x: hidden; /* Hide horizontal overflow */
+        border: 1px solid #ddd;
+      }
+
+      table {
+        width: 100%; /* Ensure the table takes full container width */
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        position: sticky; /* Keep the header fixed at the top while scrolling */
+        top: 0;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-container">
+      <div class="scrollable-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Gender</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mufinella</td>
+              <td>Godleman</td>
+              <td>mgodleman0@opera.com</td>
+              <td>Female</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Addia</td>
+              <td>Jardein</td>
+              <td>ajardein1@economist.com</td>
+              <td>Genderfluid</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Raleigh</td>
+              <td>Twinning</td>
+              <td>rtwinning2@artisteer.com</td>
+              <td>Male</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Andre</td>
+              <td>Oxborrow</td>
+              <td>aoxborrow3@epa.gov</td>
+              <td>Male</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Flemming</td>
+              <td>Izhaky</td>
+              <td>fizhaky4@skyrock.com</td>
+              <td>Male</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Frederique</td>
+              <td>Santacrole</td>
+              <td>fsantacrole5@cpanel.net</td>
+              <td>Female</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Willis</td>
+              <td>Collar</td>
+              <td>wcollar6@amazonaws.com</td>
+              <td>Male</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Alix</td>
+              <td>Bowcher</td>
+              <td>abowcher7@cafepress.com</td>
+              <td>Male</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Wenda</td>
+              <td>Shardlow</td>
+              <td>wshardlow8@google.co.uk</td>
+              <td>Female</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Rollin</td>
+              <td>Cofax</td>
+              <td>rcofax9@istockphoto.com</td>
+              <td>Male</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
