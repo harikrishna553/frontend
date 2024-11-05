@@ -1,0 +1,18 @@
+.menuListContainer{
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 5px;
+    width: 20vw;
+}
+
+li {
+    font-size: 1.1rem;
+    padding: 2px;
+}
+
+span{
+    padding: 5px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    font-weight: bold;
+}
