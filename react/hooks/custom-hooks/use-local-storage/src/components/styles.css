@@ -1,0 +1,76 @@
+/* Container Styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #7fedf5 0%, #66a6ff 100%); /* Gradient background */
+    font-family: Arial, sans-serif; /* Clean, readable font */
+}
+
+/* App Styling */
+.app {
+    width: 320px;
+    max-width: 90%; /* Responsive for smaller screens */
+    height: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Subtle, diffused shadow */
+    transition: all 0.3s ease; /* Smooth animation */
+}
+
+.app:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* More pronounced shadow on hover */
+}
+
+/* Input Field Styling */
+.appName, .appVersion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1rem;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #66a6ff;
+    box-shadow: 0 0 8px rgba(102, 166, 255, 0.5); /* Focus glow effect */
+}
+
+/* Gap between fields */
+.app .appName, .app .appVersion {
+    margin-bottom: 20px;
+}
+
+/* Overall Font Styling */
+.app label, .app input {
+    color: #444;
+}
+
+/* Add a nice cursor effect for input fields */
+input[type="text"] {
+    cursor: pointer;
+}
+
+input[type="text"]:hover {
+    border-color: #66a6ff;
+    box-shadow: 0 4px 8px rgba(102, 166, 255, 0.3);
+}
