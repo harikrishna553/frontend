@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello Canvas</title>
+
+    <style>
+      /* Center the canvas container */
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f4f8; /* Light background to contrast the canvas */
+      }
+
+      /* Style the canvas */
+      #myCanvas {
+        width: 60vw;
+        height: 60vh;
+        background-color: #f8f9fa; /* Soft, light color for the canvas */
+        border: 2px solid #333; /* Darker border for emphasis */
+        border-radius: 15px; /* Subtle rounding for smooth edges */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Define the canvas element -->
+      <canvas id="myCanvas"></canvas>
+
+      <script>
+        // Get the canvas element by ID
+        let canvas = document.getElementById("myCanvas");
+        // Get the 2D drawing context
+        let ctx = canvas.getContext("2d");
+
+        // Set up the canvas for high-resolution drawing
+        canvas.width = 600; // Adjust width for drawing area
+        canvas.height = 400; // Adjust height for drawing area
+
+        // Draw a rectangle
+        ctx.fillStyle = "#955251";
+        ctx.fillRect(50, 80, 150, 100);
+
+        // Draw a circle
+        ctx.strokeStyle = "#009B77";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(300, 130, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        // Add text
+        ctx.fillStyle = "#333";
+        ctx.font = "20px Arial";
+        ctx.fillText("Hello, Canvas!", 40, 50);
+      </script>
+    </div>
+  </body>
+</html>
