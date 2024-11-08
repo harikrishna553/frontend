@@ -1,0 +1,44 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counterApp {
+  width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
+  transition: transform 0.2s ease; /* Subtle scaling on hover */
+}
+
+.counterApp:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+#counterInfo {
+  font-size: 2em;
+  color: #333;
+  margin: 15px 0;
+  padding: 20px;
+  border: 2px solid #0072ff;
+  border-radius: 10px;
+  background-color: #f7f9fc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for text area */
+  text-align: center;
+}
+
+#incCounter {
+  font-size: 1.5em;
+  padding: 15px 25px;
+  color: #ffffff;
+  background-color: #0072ff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
