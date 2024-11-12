@@ -1,0 +1,38 @@
+.rootContainer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 50px;
+}
+
+.tabs-root {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-labels {
+  display: flex;
+}
+
+.tab-label {
+  background-color: lightgray;
+  width: 80px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+
+.tab-label:hover,
+.active {
+  background-color: gray;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
+  transition: transform 0.2s ease; /* Subtle scaling on hover */
+}
+
+.tab-content{
+  margin-top: 10px;
+}
