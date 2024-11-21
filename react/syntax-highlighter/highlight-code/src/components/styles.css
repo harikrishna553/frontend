@@ -1,0 +1,84 @@
+/* Main container for the code highlighter */
+.codeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Title styling */
+.title {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Row containing the source code and HTML code input fields */
+.firstRow {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Source code input section */
+.sourceCode,
+.htmlCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Row containing language and style selectors */
+.secondRow {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Preview section */
+.preview {
+  width: 70vw;
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+/* Typography for labels (e.g., "Language:", "Style:") */
+.secondRow > .MuiTypography-root {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 768px) {
+  .firstRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sourceCode,
+  .htmlCode,
+  .preview {
+    width: 90vw;
+  }
+
+  .secondRow {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
