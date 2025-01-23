@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Impact India - Vega Visualization</title>
+
+    <!-- Vega and Vega-Lite JS Libraries -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vega@5.23.0"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vega-lite@5.7.0"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.0"
+    ></script>
+  </head>
+  <body>
+    <h1>Food Impact India Visualization</h1>
+
+    <!-- Container to embed the Vega visualization -->
+    <div id="vis"></div>
+
+    <script type="text/javascript">
+      // Vega-Lite specification for visualization
+      const spec = {
+        $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+
+        "width": 400,
+        // Data source, pointing to the 'foodImpactIndia.csv' file located in the same folder
+        data: {
+          url: "foodImpactIndia.csv", // File name (relative path)
+          format: {
+            type: "csv", // Specifies the format of the data
+          },
+        },
+
+        transform: [
+          {
+            aggregate: [
+              {
+                op: "average",
+                field: "Daily_Calorie_Intake",
+                as: "Avg_Calorie_Intake",
+              },
+            ],
+            groupby: ["Region"],
+          },
+        ],
+        mark: "bar",
+        encoding: {
+          x: { field: "Region", type: "ordinal", axis: { title: "Region" } },
+          y: {
+            field: "Avg_Calorie_Intake",
+            type: "quantitative",
+            axis: { title: "Average Calorie Intake" },
+          },
+        },
+      };
+
+      // Embedding the Vega-Lite visualization into the div with id 'vis'
+      vegaEmbed("#vis", spec)
+        .then(function (result) {
+          // Visualization successfully embedded
+        })
+        .catch(function (error) {
+          // Handle any errors during embedding
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>

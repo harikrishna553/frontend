@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Distribution - Vega Visualization</title>
+
+    <!-- Vega and Vega-Lite JS Libraries -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vega@5.23.0"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vega-lite@5.7.0"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.0"
+    ></script>
+  </head>
+  <body>
+    <h1>Age Distribution Visualization</h1>
+
+    <!-- Container to embed the Vega visualization -->
+    <div id="vis"></div>
+
+    <script type="text/javascript">
+      // Vega-Lite specification for age distribution visualization
+      const spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "data": {
+    "url": "foodImpactIndia.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+
+  "vconcat": [
+    {
+      "hconcat": [
+        {
+          "transform": [
+            {
+              "impute": "Age",
+              "key": "Age",
+              "method": "mean",
+              "as": "Age"
+            }
+          ],
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Age",
+              "type": "quantitative",
+              "title": "Age",
+              "bin": true
+            },
+            "y": {
+              "aggregate": "count",
+              "type": "quantitative",
+              "title": "Count"
+            }
+          },
+          "title": "Distribution of Age with Imputed Missing Values"
+        },
+        {
+          "transform": [
+            {
+              "impute": "Daily_Calorie_Intake",
+              "key": "Daily_Calorie_Intake",
+              "method": "mean",
+              "as": "Daily_Calorie_Intake"
+            }
+          ],
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Daily_Calorie_Intake",
+              "type": "quantitative",
+              "bin": {
+                "start": 1500,
+                "step": 500
+              },
+              "title": "Daily Calorie Intake"
+            },
+            "y": {
+              "aggregate": "count",
+              "type": "quantitative",
+              "title": "Count"
+            }
+          },
+          "title": "Distribution of Daily Calorie Intake with Imputed Missing Values"
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Health_Impact",
+              "type": "nominal",
+              "title": "Health Impact"
+            },
+            "y": {
+              "aggregate": "count",
+              "type": "quantitative",
+              "title": "Count"
+            }
+          },
+          "title": "Count of Health Impact Categories"
+        },
+        {
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Region",
+              "type": "nominal",
+              "title": "Region"
+            },
+            "y": {
+              "aggregate": "mean",
+              "field": "BMI",
+              "type": "quantitative",
+              "title": "Average BMI"
+            }
+          },
+          "title": "Average BMI per Region"
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Spice_Level",
+              "type": "nominal",
+              "title": "Spice Level"
+            },
+            "y": {
+              "aggregate": "mean",
+              "field": "Daily_Calorie_Intake",
+              "type": "quantitative",
+              "title": "Average Daily Calorie Intake"
+            }
+          },
+          "title": "Average Daily Calorie Intake per Spice Level"
+        },
+        {
+          "mark": "point",
+          "encoding": {
+            "x": {
+              "field": "Age",
+              "type": "quantitative",
+              "title": "Age"
+            },
+            "y": {
+              "field": "BMI",
+              "type": "quantitative",
+              "title": "BMI"
+            },
+            "color": {
+              "field": "Health_Impact",
+              "type": "nominal",
+              "title": "Health Impact"
+            }
+          },
+          "title": "BMI vs Age (Colored by Health Impact)"
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "mark": "point",
+          "encoding": {
+            "x": {
+              "field": "Food_Frequency",
+              "type": "nominal",
+              "title": "Food Frequency"
+            },
+            "y": {
+              "field": "Sugar_Intake",
+              "type": "nominal",
+              "title": "Sugar Intake"
+            }
+          },
+          "title": "Food Frequency vs Sugar Intake"
+        },
+        {
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Region",
+              "type": "nominal",
+              "title": "Region"
+            },
+            "y": {
+              "aggregate": "count",
+              "type": "quantitative",
+              "title": "Count"
+            },
+            "color": {
+              "field": "Diet_Type",
+              "type": "nominal",
+              "title": "Diet Type"
+            }
+          },
+          "title": "Diet Type Count by Region"
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Food_Frequency",
+              "type": "nominal",
+              "title": "Food Frequency"
+            },
+            "y": {
+              "aggregate": "count",
+              "type": "quantitative",
+              "title": "Count"
+            }
+          },
+          "title": "Food Frequency Distribution"
+        },
+        {
+          "mark": "point",
+          "encoding": {
+            "x": {
+              "field": "BMI",
+              "type": "quantitative",
+              "title": "BMI"
+            },
+            "y": {
+              "field": "Health_Score",
+              "type": "quantitative",
+              "title": "Health Score"
+            }
+          },
+          "title": "Health Score vs BMI"
+        }
+      ]
+    }
+  ]
+};
+
+
+      // Embedding the Vega-Lite visualization into the div with id 'vis'
+      vegaEmbed("#vis", spec)
+        .then(function (result) {
+          // Visualization successfully embedded
+        })
+        .catch(function (error) {
+          // Handle any errors during embedding
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>

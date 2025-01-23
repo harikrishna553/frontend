@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vega-Lite Responsive Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  </head>
+  <body>
+    <h2>Responsive Chart (Width only)</h2>
+    <div id="vis" style="width: 100%"></div>
+    
+
+    <script>
+      const yourVegaLiteSpec = {
+  "data": {
+    "values": [
+      {"product": "Laptop", "category": "Electronics", "region": "North", "items_sold": 100, "total_items": 150, "discount_percent": 10},
+      {"product": "Smartphone", "category": "Electronics", "region": "South", "items_sold": 200, "total_items": 250, "discount_percent": 15},
+      {"product": "Shirt", "category": "Clothing", "region": "East", "items_sold": 300, "total_items": 400, "discount_percent": 20},
+      {"product": "Jeans", "category": "Clothing", "region": "West", "items_sold": 150, "total_items": 200, "discount_percent": 5},
+      {"product": "Refrigerator", "category": "Home Appliances", "region": "Central", "items_sold": 50, "total_items": 80, "discount_percent": 12},
+      {"product": "Washing Machine", "category": "Home Appliances", "region": "Northeast", "items_sold": 120, "total_items": 160, "discount_percent": 8},
+      {"product": "Microwave", "category": "Home Appliances", "region": "Southwest", "items_sold": 75, "total_items": 100, "discount_percent": 10},
+      {"product": "Air Conditioner", "category": "Home Appliances", "region": "Southeast", "items_sold": 40, "total_items": 60, "discount_percent": 5},
+      {"product": "Headphones", "category": "Electronics", "region": "North", "items_sold": 180, "total_items": 200, "discount_percent": 30},
+      {"product": "Smartwatch", "category": "Electronics", "region": "West", "items_sold": 90, "total_items": 130, "discount_percent": 10},
+      {"product": "Table", "category": "Furniture", "region": "East", "items_sold": 60, "total_items": 80, "discount_percent": 5},
+      {"product": "Sofa", "category": "Furniture", "region": "South", "items_sold": 45, "total_items": 60, "discount_percent": 12},
+      {"product": "Chair", "category": "Furniture", "region": "West", "items_sold": 130, "total_items": 150, "discount_percent": 20},
+      {"product": "Couch", "category": "Furniture", "region": "Central", "items_sold": 70, "total_items": 100, "discount_percent": 15},
+      {"product": "T-shirt", "category": "Clothing", "region": "Southwest", "items_sold": 250, "total_items": 300, "discount_percent": 5},
+      {"product": "Sweater", "category": "Clothing", "region": "Northeast", "items_sold": 100, "total_items": 120, "discount_percent": 18}
+    ]
+  },
+  "config": {
+    "mark": {"invalid": "filter", "tooltip": true}
+  },
+  "vconcat": [
+  {
+    "title": "Discount vs. Sales Performance",
+    "hconcat": [{
+      "width": 100,
+      "height": 100,
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "area",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }]
+  },
+  {
+    "title": "Discount vs. Sales Performance",
+    "hconcat": [{
+      "width": 100,
+      "height": 100,
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "area",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }]
+  },
+  {
+    "title": "Discount vs. Sales Performance",
+    "hconcat": [{
+      "width": 100,
+      "height": 100,
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "area",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }]
+  },
+  {
+    "title": "Discount vs. Sales Performance",
+    "hconcat": [{
+      "width": 100,
+      "height": 100,
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "area",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }]
+  },
+  {
+    "title": "Discount vs. Sales Performance",
+    "hconcat": [{
+      "width": 100,
+      "height": 100,
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "area",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }]
+  },
+  {
+    "title": "Discount vs. Sales Performance",
+    "hconcat": [{
+      "width": 100,
+      "height": 100,
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "area",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }]
+  },
+  {
+    "title": "Discount vs. Sales Performance",
+    "hconcat": [{
+      "width": 100,
+      "height": 100,
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "area",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }]
+  },
+    
+  {
+    "title": "Sales Data (Items Sold vs. Total Items)",
+    "hconcat": [{
+      "width": 100,
+      "height": 100,
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "items_sold", "type": "quantitative"},
+        "y": {"field": "total_items", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "category", "type": "nominal"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {"field": "region", "type": "ordinal"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "area",
+      "encoding": {
+        "x": {"field": "region", "type": "ordinal"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }]
+  },{
+    "title": "Discount vs. Sales Performance",
+    "hconcat": [{
+      "width": 100,
+      "height": 100,
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "area",
+      "encoding": {
+        "x": {"field": "discount_percent", "type": "quantitative"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }]
+  },{
+    "title": "Product-wise Sales Analysis",
+    "hconcat": [{
+      "width": 100,
+      "height": 100,
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "product", "type": "nominal"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "product", "type": "nominal"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {"field": "product", "type": "nominal"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "area",
+      "encoding": {
+        "x": {"field": "product", "type": "nominal"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "category", "type": "nominal"}
+      }
+    }]
+  },{
+    "title": "Category Performance Across Regions",
+    "hconcat": [{
+      "width": 100,
+      "height": 100,
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "category", "type": "nominal"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "category", "type": "nominal"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {"field": "category", "type": "nominal"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }, {
+      "width": 100,
+      "height": 100,
+      "mark": "area",
+      "encoding": {
+        "x": {"field": "category", "type": "nominal"},
+        "y": {"field": "items_sold", "type": "quantitative"},
+        "color": {"field": "region", "type": "nominal"}
+      }
+    }]
+  }]
+};
+
+      vegaEmbed("#vis", yourVegaLiteSpec);
+    </script>
+  </body>
+</html>
