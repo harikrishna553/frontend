@@ -1,26 +1,31 @@
-const { chromium } = require('playwright');  // Remove the import of expect
-const fs = require('fs');
+const { chromium } = require("playwright"); // Remove the import of expect
+const fs = require("fs");
 
 async function runTestFromConfig(configFile) {
   if (!fs.existsSync(configFile)) {
     throw new Error(`Config file not found: ${configFile}`);
   }
 
-  const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
+  const config = JSON.parse(fs.readFileSync(configFile, "utf8"));
 
   let browser, page;
   try {
     console.log("Launching browser...");
-    browser = await chromium.launch({ headless: false, timeout: 60000 }); // headless mode, increased timeout
+    browser = await chromium.launch({
+      headless: false,
+      timeout: 60000,
+      slowMo: 2000,
+    }); // headless mode, increased timeout
     console.log("Opening new page...");
     const context = await browser.newContext(); // Create a new context
     page = await context.newPage(); // Create a new page within the context
 
     for (const step of config.steps) {
-      const { action, method, selector, url, value, options, assertion } = step;
+      const { action, locatorType, selector, url, value, options, assertion } =
+        step;
       let element;
 
-      switch (method) {
+      switch (locatorType) {
         case "getByPlaceholder":
           element = page.getByPlaceholder(selector);
           break;
@@ -45,11 +50,11 @@ async function runTestFromConfig(configFile) {
           break;
         case "fill":
           await element.fill(value);
-          console.log(`Filled ${selector} with "${value}"`);
+          //console.log(`Filled ${selector} with "${value}"`);
           break;
         case "assert":
           if (assertion === "visible") {
-            await element.isVisible();  // Correct use of Playwright's built-in assertion method
+            await element.isVisible(); // Correct use of Playwright's built-in assertion method
             console.log(`✅ Assertion Passed: "${selector}" is visible`);
           } else {
             console.error(`❌ Unsupported assertion: ${assertion}`);
@@ -71,4 +76,4 @@ async function runTestFromConfig(configFile) {
 
 module.exports = { runTestFromConfig };
 
-runTestFromConfig('path of testConfig.json')
+runTestFromConfig("test config file path");
