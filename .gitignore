@@ -1,3 +1,9 @@
+allure-results/
+allure-report/
+.wdio-report/*
+reports/
+logs/
+
 # Node.js dependencies
 node_modules/
 npm-debug.log*
