@@ -1,3 +1,65 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+out/
+tsconfig.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.test
+.env.production
+
+# iOS build artifacts
+DerivedData/
+*.xcworkspace
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+*.xcuserdata/
+*.ipa
+*.app
+*.dSYM.zip
+*.dSYM
+
+# Android build artifacts
+*.apk
+*.ap_ 
+*.dex
+*.class
+*.keystore
+*.jks
+*.so
+*.iml
+.gradle/
+local.properties
+/.idea
+/captures/
+output.json
+
+# Appium related
+appium.log
+*.trace
+
+# WebdriverIO related
+.wdio/*
+.allure-results/
+.allure-report/
+.wdio-report/*
+reports/
+logs/
+
+# Mac OS system files
+.DS_Store_
+
 # Logs
 logs
 *.log
