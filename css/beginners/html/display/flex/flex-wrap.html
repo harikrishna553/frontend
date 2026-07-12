@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .title{
+            background-color: lightgray;
+            color: black;
+            font-size: 25px;
+            margin: 10px;
+            width: 350px;
+        }
+
+        .container-flex-nowrap {
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        .container-flex-wrap {
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            flex-wrap: wrap;
+        }
+
+        .container-flex-wrap-reverse {
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            flex-wrap: wrap-reverse;
+        }
+
+        .item {
+            background-color: deepskyblue;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .scenario{
+            margin-bottom: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class = "scenario">
+        <h1 class="title">flex-wrap: nowrap</h1>
+            <div class="container-flex-nowrap">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+    </div>
+    
+
+    <div class = "scenario">
+        <h1 class="title">flex-wrap: wrap</h1>
+        <div class="container-flex-wrap">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+    </div>
+
+    <div class = "scenario">
+        <h1 class="title">flex-wrap: wrap-reverse</h1>
+        <div class="container-flex-wrap-reverse">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+    </div>
+
+</body>
+</html>

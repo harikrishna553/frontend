@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RemoveChild Example</title>
+  </head>
+  <body>
+    <p>Following are the fruits I like most</p>
+
+    <ul>
+        <li>Banana</li>
+        <li>Apple</li>
+        <li>Grapes</li>
+    </ul>
+
+    <button onclick="removeElement()" id="removeElement">Remove Item</button>
+
+    <script>
+      function removeElement() {
+        let ulElement = document.querySelector("ul");
+        let liElement = document.querySelector("li");
+
+        if(liElement === null){
+            alert("No item exists to delete");
+            document.getElementById("removeElement").hidden = true;
+            document.querySelector("p").hidden = true;
+            
+            let textNode = document.createTextNode("All the Items are deleted");
+            document.body.appendChild(textNode);
+            return;
+        }
+        ulElement.removeChild(liElement);
+      }
+
+    </script>
+  </body>
+</html>

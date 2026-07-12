@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>z-index Example with 3 Boxes</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .boxContainer {
+        width: 350px;
+        height: 350px;
+        position: relative;
+        background-color: lightgray;
+        margin: 20px;
+      }
+
+      /* Common Box Styles */
+      .box {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        color: black;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+      }
+
+      /* Specific Box Styles */
+      .box1 {
+        background-color: lightblue;
+        top: 100px;
+        left: 30px;
+      }
+
+      .box2 {
+        background-color: lightcoral;
+        top: 130px;
+        left: 60px;
+      }
+
+      .box3 {
+        background-color: lightgreen;
+        top: 160px;
+        left: 90px;
+      }
+
+      p {
+        font-size: 1.2em;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxContainer">
+        <p>Regular Alignment</p>
+      <div class="box box1">Box 1</div>
+      <div class="box box2">Box 2</div>
+      <div class="box box3">Box 3</div>
+    </div>
+
+    <div class="boxContainer">
+        <p>
+            <ul>
+                <li>Box 1: (z-index: 1)</li>
+                <li>Box 2: (z-index: 2)</li>
+                <li>Box 3 : (z-index: 3)</li>
+            </ul>
+        </p>
+      <div class="box box1" style="z-index: 1">Box 1</div>
+      <div class="box box2" style="z-index: 2">Box 2</div>
+      <div class="box box3" style="z-index: 3">Box 3</div>
+    </div>
+
+    <div class="boxContainer">
+        <p>
+            <ul>
+                <li>Box 1: (z-index: 3)</li>
+                <li>Box 2: (z-index: 1)</li>
+                <li>Box 3 : (z-index: 2)</li>
+            </ul>
+        </p>
+      <div class="box box1" style="z-index: 3">Box 1</div>
+      <div class="box box2" style="z-index: 1">Box 2</div>
+      <div class="box box3" style="z-index: 2">Box 3</div>
+    </div>
+
+    <div class="boxContainer">
+        <p>
+            <ul>
+                <li>Box 1: (z-index: 2)</li>
+                <li>Box 2: (z-index: 3)</li>
+                <li>Box 3 : (z-index: 1)</li>
+            </ul>
+        </p>
+      <div class="box box1" style="z-index: 2">Box 1</div>
+      <div class="box box2" style="z-index: 3">Box 2</div>
+      <div class="box box3" style="z-index: 1">Box 3</div>
+    </div>
+
+    <div class="boxContainer">
+        <p>
+            <ul>
+                <li>Box 1: (z-index: 3)</li>
+                <li>Box 2: (z-index: 2)</li>
+                <li>Box 3 : (z-index: 1)</li>
+            </ul>
+        </p>
+      <div class="box box1" style="z-index: 3">Box 1</div>
+      <div class="box box2" style="z-index: 2">Box 2</div>
+      <div class="box box3" style="z-index: 1">Box 3</div>
+    </div>
+  </body>
+</html>

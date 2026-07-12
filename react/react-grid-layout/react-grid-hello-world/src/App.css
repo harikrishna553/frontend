@@ -1,0 +1,33 @@
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.layout {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.grid-item {
+  background-color: #36a1f8;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.grid-item-2 {
+  background-color: #5636f8;
+}
+
+.grid-item-3 {
+  background-color: #d136f8;
+}
+
+.grid-item-4 {
+  background-color: #f87036;
+}

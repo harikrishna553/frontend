@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Position Absolute Example</title>
+
+    <style>
+      .grandParent {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        margin: 20px;
+        width: 90vw;
+        height: 60vh;
+        background-color: lightgrey;
+        position: relative; /* Establishes a positioning context */
+      }
+
+      .parent {
+        background: #dc9096;
+        width: 200px;
+        height: 150px;
+        color: white;
+        font-size: 1.2em;
+        margin: 30px;
+        padding-top: 20px; /* Prevents margin collapse */
+        position: static; /* Default position, no positioning context set here */
+      }
+
+      .parent .child {
+        height: 30px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ccc;
+        color: black;
+      }
+
+      .child1 {
+        background: #f0d43a;
+      }
+
+      .child2 {
+        background: #22b2da;
+      }
+
+      .child3 {
+        background: #3b4a6b;
+        color: white;
+      }
+
+      /* Absolute positioning of child1 within different parents */
+      .parent1 .child1 {
+        position: absolute;
+        top: 50px; /* Moves 50px down from the top of the grandParent */
+        left: 20px; /* Moves 20px right from the left of the grandParent */
+        background: #f89f29;
+      }
+
+      .parent2 .child1 {
+        position: absolute;
+        bottom: 30px; /* Moves 30px up from the bottom of the grandParent */
+        right: 40px; /* Moves 40px left from the right of the grandParent */
+        background: #8bc34a;
+      }
+
+      /* Styles for better visibility */
+      h1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grandParent">
+      <h1>Grand Parent Container</h1>
+
+      <div class="parent">
+        <div class="child1 child">Child 1 (No Position)</div>
+        <div class="child2 child">Child 2</div>
+        <div class="child3 child">Child 3</div>
+      </div>
+
+      <div class="parent parent1">
+        <div class="child1 child">{top: 50px; left: 20px}</div>
+        <div class="child2 child">Child 2</div>
+        <div class="child3 child">Child 3</div>
+      </div>
+
+      <div class="parent parent2">
+        <div class="child1 child">{bottom: 30px; right: 40px}</div>
+        <div class="child2 child">Child 2</div>
+        <div class="child3 child">Child 3</div>
+      </div>
+    </div>
+  </body>
+</html>

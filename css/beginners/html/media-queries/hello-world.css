@@ -1,0 +1,38 @@
+/* Base styles for all devices */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    display: flex;                /* Enable flexbox on the item */
+    justify-content: center;      /* Center horizontally */
+    align-items: center;          /* Center vertically */
+    width: 300px;                 /* Fixed width of the item */
+    height: 200px;                /* Fixed height of the item */
+    background-color: #4CAF50;    /* Green background for the item */
+    color: white;                 /* Text color */
+    font-size: 24px;              /* Font size */
+    border-radius: 10px;          /* Rounded corners */
+    margin: 20px;                 /* Margin around the item */
+}
+
+/* Styles for devices with a maximum width of 768px (tablets and smaller) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        flex-direction: column;
+    }
+}
+
+/* Styles for devices with a minimum width of 769px (desktops) */
+@media (min-width: 769px) {
+    body {
+        font-size: 20px;
+    }
+}
+

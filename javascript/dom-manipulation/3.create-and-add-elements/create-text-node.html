@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CreateTextNode Example</title>
+  </head>
+  <body>
+    <div>
+       
+    </div>
+
+    <button onclick="createText()" id="createText">Create Text</button>
+    <button onclick="createHTMLText()" id="createHTMLText">Create HTML Text</button>
+
+    <script>
+      function createText() {
+        let divTag = document.querySelector("div");
+
+        let textNode = document.createTextNode("Hi There!!!!!");
+        divTag.appendChild(textNode);
+       
+        document.getElementById("createText").hidden = true;
+      }
+
+      function createHTMLText() {
+        let divTag = document.querySelector("div");
+
+        let textNode = document.createTextNode("<b>This is bold text</b>");
+        divTag.appendChild(textNode);
+       
+        document.getElementById("createHTMLText").hidden = true;
+      }
+
+    </script>
+  </body>
+</html>

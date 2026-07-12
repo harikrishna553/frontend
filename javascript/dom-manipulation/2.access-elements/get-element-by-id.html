@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GetElementById Example</title>
+  </head>
+  <body>
+    <div id="parent">
+      <p id="para1">This is a paragraph.</p>
+      <span>This is a span.</span>
+      <!-- This is a comment -->
+      This is some text outside elements.
+    </div>
+    <br><br>
+
+    <button onclick="updateParagraphContent()">Update Paragraph Content</button>
+
+    <script>
+      function updateParagraphContent() {
+        let paraElement = document.getElementById("para1");
+        
+        if(paraElement === null){
+            return
+        }
+
+        paraElement.textContent = 'Hello World';
+        paraElement.style.fontWeight = "bold"
+        paraElement.style.backgroundColor = 'lightblue';
+
+
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Example</title>
+    <style>
+        .box {
+            background-color: #f0f0f0;
+            padding: 20px; /* Padding shorthand example */
+            border: 2px solid #000; /* Border with size, style, and color */
+            margin: 20px; /* Margin to separate boxes */
+        }
+
+        .box-top {
+            padding-top: 40px; /* Only top padding */
+            border-top: 5px dashed red; /* Top border with specific style */
+        }
+
+        .box-right {
+            padding-right: 30px; /* Only right padding */
+            border-right: 3px dotted blue; /* Right border with specific style */
+        }
+
+        .box-bottom {
+            padding-bottom: 50px; /* Only bottom padding */
+            border-bottom: 4px double green; /* Bottom border with specific style */
+        }
+
+        .box-left {
+            padding-left: 60px; /* Only left padding */
+            border-left: 6px groove purple; /* Left border with specific style */
+        }
+
+        .complex-padding {
+            padding: 10px 20px 30px 40px; /* Different padding for each side */
+            border: 1px solid #666; /* Solid border with gray color */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">This box has equal padding on all sides and a solid border.</div>
+    <div class="box box-top">This box has extra top padding and a dashed top border.</div>
+    <div class="box box-right">This box has extra right padding and a dotted right border.</div>
+    <div class="box box-bottom">This box has extra bottom padding and a double bottom border.</div>
+    <div class="box box-left">This box has extra left padding and a groove left border.</div>
+    <div class="box complex-padding">This box uses different padding for each side and a solid border.</div>
+</body>
+</html>

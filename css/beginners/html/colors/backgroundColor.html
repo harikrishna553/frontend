@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrast Example in CSS</title>
+    <style>
+        /* High contrast for better readability */
+        .good-contrast {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        /* Low contrast that may be hard to read */
+        .poor-contrast {
+            background-color: lightgrey;
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        /* General styles for both text areas */
+        .text-box {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">CSS Contrast Examples</h1>
+
+    <div class="text-box good-contrast">
+        <p>This is an example of good contrast. The text is easy to read against the background.</p>
+    </div>
+
+    <div class="text-box poor-contrast">
+        <p>This is an example of poor contrast. The text is harder to read against the background.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scroll Percentage Demo</title>
+  </head>
+  <body>
+    <ul id="countryList"></ul>
+    <script>
+      function getScrollPercentage() {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+
+        const scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+        console.log("Scrolled Percentage:", scrollPercent.toFixed(2) + "%");
+        return scrollPercent;
+      }
+
+      // JavaScript array of countries
+      const countries = [
+        "United States",
+        "Canada",
+        "United Kingdom",
+        "Australia",
+        "Germany",
+        "France",
+        "India",
+        "Japan",
+        "China",
+        "Brazil",
+        "South Africa",
+        "Mexico",
+        "Argentina",
+        "Russia",
+        "Italy",
+        "Spain",
+        "Turkey",
+        "Saudi Arabia",
+        "South Korea",
+        "Indonesia",
+        "Netherlands",
+        "Switzerland",
+        "Sweden",
+        "Belgium",
+        "Poland",
+        "Norway",
+        "Austria",
+        "Denmark",
+        "Finland",
+        "Greece",
+        "Ireland",
+        "Portugal",
+        "New Zealand",
+        "Singapore",
+        "Malaysia",
+        "Thailand",
+        "Philippines",
+        "Vietnam",
+        "Israel",
+        "Egypt",
+        "Nigeria",
+        "Kenya",
+        "Chile",
+        "Colombia",
+        "Peru",
+        "Venezuela",
+        "Bangladesh",
+        "Pakistan",
+        "Ukraine",
+        "Hungary",
+        "Czech Republic",
+      ];
+
+      // Select the UL element where the countries will be displayed
+      const countryList = document.getElementById("countryList");
+
+      // Loop through the countries array and create an <li> for each country
+      countries.forEach((country) => {
+        const listItem = document.createElement("li"); // Create an <li> element
+        listItem.textContent = country; // Set the text of the <li> to the country name
+        countryList.appendChild(listItem); // Add the <li> to the <ul>
+      });
+
+      window.addEventListener("scroll", () => {
+        console.log(`Scroll Percentage: ${getScrollPercentage()}`);
+      });
+    </script>
+  </body>
+</html>

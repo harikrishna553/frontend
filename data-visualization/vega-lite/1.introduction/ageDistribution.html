@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Distribution - Vega Visualization</title>
+
+    <!-- Vega and Vega-Lite JS Libraries -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vega@5.23.0"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vega-lite@5.7.0"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.0"
+    ></script>
+  </head>
+  <body>
+    <h1>Age Distribution Visualization</h1>
+
+    <!-- Container to embed the Vega visualization -->
+    <div id="vis"></div>
+
+    <script type="text/javascript">
+      // Vega-Lite specification for age distribution visualization
+      const spec = {
+        $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+        "width": 800,
+        // Data source pointing to the 'foodImpactIndia.csv' file located in the same folder
+        data: {
+          url: "foodImpactIndia.csv", // File name (relative path)
+          format: {
+            type: "csv", // Specifies the format of the data
+          },
+        },
+
+        // Transform to handle missing values by imputing the mean for 'Age'
+        transform: [
+          {
+            impute: "Age", // Specify the field to handle missing values
+            key: "Age", // Use the 'Age' field for imputation
+            method: "mean", // Use 'mean' to replace missing values
+            as: "Age", // Output the transformed values as 'Age'
+          },
+        ],
+
+        // Visualization mark type - bar chart for counting occurrences
+        mark: "bar",
+
+        // Encoding the fields for the x and y axes
+        encoding: {
+          // Encoding the x-axis to represent 'Age' as a quantitative variable
+          x: {
+            field: "Age",
+            type: "quantitative",
+            title: "Age",
+          },
+
+          // Encoding the y-axis to represent the count of occurrences of each 'Age'
+          y: {
+            aggregate: "count", // Aggregating count of occurrences
+            type: "quantitative",
+            title: "Count",
+          },
+        },
+      };
+      // Embedding the Vega-Lite visualization into the div with id 'vis'
+      vegaEmbed("#vis", spec)
+        .then(function (result) {
+          // Visualization successfully embedded
+        })
+        .catch(function (error) {
+          // Handle any errors during embedding
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>

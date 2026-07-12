@@ -1,0 +1,81 @@
+.smartAccordion {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 80vw;
+  align-items: center;
+  margin-top: 10vh;
+  margin-left: 5vw;
+  background-color: #f8f9fa; /* Light background for the whole component */
+  padding: 30px;
+}
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #8c8b8b; /* Darker gray for the container */
+  padding: 15px;
+  width: 60%;
+  max-height: 70vh; /* Restrict height to enable scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+  border-radius: 12px; /* Softer rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+.accordionItem {
+  width: 100%;
+  margin: 10px 0;
+  background-color: #e6cfcf; /* Soft pink background */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.accordionItem:hover {
+  background-color: #d4b0b0; /* Slightly darker on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.accordionTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  color: #333; /* Darker text for readability */
+}
+
+.accordionDescription {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  color: #4a4a4a; /* Medium-dark text color */
+  background-color: #f7e9e9; /* Light background for description */
+  border-radius: 8px; /* Matches the accordion item */
+  margin-top: -8px;
+}
+
+.selectionModeButton {
+  background-color: #f3f3f3;
+  width: 250px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 1em;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: 250px;
+}
+
+.selectionModeButton:hover {
+  background-color: #e0e0e0; /* Darker shade on hover */
+  color: #000; /* Darker text on hover */
+}

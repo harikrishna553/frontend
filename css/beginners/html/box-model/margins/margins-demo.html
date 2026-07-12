@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Margin Example</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 20px auto; /* Shorthand to center horizontally and set top/bottom margins */
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .box1 {
+            background-color: #ffdddd;
+            margin-top: 10px; /* Only top margin */
+            margin-right: 20px; /* Only right margin */
+            margin-bottom: 30px; /* Only bottom margin */
+            margin-left: 40px; /* Only left margin */
+            padding: 10px;
+        }
+
+        .box2 {
+            background-color: #ddffdd;
+            margin: 15px 25px; /* Top/bottom: 15px, Left/right: 25px */
+            padding: 10px;
+        }
+
+        .box3 {
+            background-color: #ddddff;
+            margin: 10px 20px 30px 40px; /* Top: 10px, Right: 20px, Bottom: 30px, Left: 40px */
+            padding: 10px;
+        }
+
+        .centered {
+            background-color: #ffffdd;
+            width: 50%;
+            margin: 0 auto; /* Top/bottom: 0px, Left/right: auto (centers the box horizontally) */
+            padding: 10px;
+        }
+
+        .negative-margin {
+            background-color: #ffeedd;
+            margin-top: -10px; /* Negative top margin to pull the box upwards */
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box1">Box 1: Different individual margins</div>
+        <div class="box2">Box 2: Shorthand margin for top/bottom and left/right</div>
+        <div class="box3">Box 3: Shorthand margin for all four sides</div>
+        <div class="centered">Centered Box: Using auto for left/right margins</div>
+        <div class="negative-margin">Negative Margin Box: Using negative top margin</div>
+    </div>
+
+</body>
+</html>

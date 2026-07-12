@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grow Example</title>
+    <style>
+        .container {
+            display: flex;
+            width: 90vw;
+            height: 100px;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        .item {
+            background-color: #8e44ad;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 5px;
+            flex-grow: 1; /* Default flex-grow value */
+            width: 100px;
+        }
+        .item-2 {
+            flex-grow: 3; /* This item will grow twice as much as the others */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item item-2">2</div>
+        <div class="item">3</div>
+    </div>
+
+</body>
+</html>

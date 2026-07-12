@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .title{
+            background-color: lightgray;
+            color: black;
+            font-size: 25px;
+            margin: 10px;
+            width: 330px;
+        }
+
+        .container {
+            display: flex;
+            height: 250px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        .item {
+            background-color: deepskyblue;
+            padding: 10px;
+            margin: 10px;
+            height: 30px;
+            color: white;
+            text-align: center;
+        }
+
+        .scenario{
+            margin-bottom: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class = "scenario">
+        <h1 class="title">stretch</h1>
+            <div class="container">
+            <div class="item" style="align-self: auto;">A</div>
+            <div class="item" style="align-self: center;">B</div>
+            <div class="item" style="align-self: flex-end;">C</div>
+            <div class="item" style="align-self: center;">D</div>
+            <div class="item" style="align-self: baseline;">E</div>
+        </div>
+    </div>
+
+</body>
+</html>

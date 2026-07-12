@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textarea Example</title>
+  </head>
+
+  <body>
+    <form action="https://httpbin.org/post" method="POST">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <p><label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /></p>
+
+        <p><label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /></p>
+      </fieldset>
+
+      <fieldset style="margin-top: 30px">
+        <legend>Preferences</legend>
+
+        <p><label for="contact">Preferred Contact Method:</label>
+        <select id="contact" name="contact">
+          <option value="email">Email</option>
+          <option value="phone">Phone</option>
+        </select></p>
+
+        <p><label for="subscribe">Subscribe to newsletter:</label>
+        <input type="checkbox" id="subscribe" name="subscribe" /></p>
+      </fieldset>
+
+      <fieldset style="margin-top: 30px">
+        <legend>Short writeup about yourself</legend>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message here..."></textarea>
+      </fieldset>
+
+      <input type="submit" value="Submit" style="margin-top: 20px"/>
+    </form>
+  </body>
+</html>

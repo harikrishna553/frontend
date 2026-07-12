@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+          display: flex;
+          width: 600px; /* Total width of the container */
+          border: 2px solid #000;
+          margin-top: 10px;
+        }
+
+        .item {
+          flex-grow: 1;  /* Items will grow equally if space is available */
+          flex-shrink: 1; /* Items will shrink equally if needed */
+          border: 2px solid red;
+        }
+
+        .item1 {
+          flex-basis: 100px; /* Item 1 starts with a width of 100px */
+        }
+
+        .item2 {
+          flex-basis: 200px; /* Item 2 starts with a width of 200px */
+        }
+
+        .item3 {
+          flex-basis: 150px; /* Item 3 starts with a width of 150px */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+    </div>
+
+</body>
+</html>

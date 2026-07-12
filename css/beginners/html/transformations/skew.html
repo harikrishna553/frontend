@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Skew Functions Example</title>
+    <style>
+        .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid blue;
+    font-size: 12px;
+    text-align: center;
+    position: relative; /* Ensure text positioning */
+    font-size: 30px;
+}
+
+.box-details {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.skew45 { transform: skewX(25deg); }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box skew45">25deg<div class="box-details">(skew x)</div></div>
+    </div>
+</body>
+</html>

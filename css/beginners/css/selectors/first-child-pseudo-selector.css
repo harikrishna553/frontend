@@ -1,0 +1,4 @@
+.item-list li:first-child {
+    font-weight: bold;
+    color: blue;
+}

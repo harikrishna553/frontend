@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QuerySelectorAll Example</title>
+  </head>
+  <body>
+    <h1>My favorite fruits</h1>
+    <ol>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Grapes</li>
+    </ol>
+
+    <br /><br />
+
+    <h1>My favorite places</h1>
+    <ul>
+      <li>Bangalore</li>
+      <li>Jaipur</li>
+      <li>Thiruvannamalai</li>
+    </ul>
+
+    <br /><br /><br />
+    <h1>My favorite countries</h1>
+    <ul>
+      <li>India</li>
+      <li>Nepal</li>
+      <li>Egypt</li>
+    </ul>
+
+    <button id="applyStyle">
+      Apply style to the all list items in unordered list
+    </button>
+
+    <script>
+      document.getElementById("applyStyle").onclick = function () {
+        let itemsMapped = document.querySelectorAll("ul li");
+
+        for (let item of itemsMapped) {
+          item.style.fontWeight = "bold";
+          item.style.fontSize = "1.5em";
+          item.style.color = "darkblue";
+        }
+      };
+    </script>
+  </body>
+</html>

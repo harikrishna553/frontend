@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model and Units Example</title>
+    <style>
+        /* Basic styles for body */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header with full viewport height */
+        .header {
+            background-color: #4CAF50;
+            height: 100vh; /* Full viewport height */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5vw; /* Responsive font size based on viewport width */
+            text-align: center;
+        }
+
+        /* Main content area */
+        .content {
+            width: 80%; /* 80% of the parent's width */
+            margin: 20px auto;
+            padding: 20px;
+            border: 4px solid #ddd;
+            background-color: #e9e9e9;
+        }
+
+        /* Footer with fixed height */
+        .footer {
+            background-color: #333;
+            color: white;
+            height: 60px; /* Fixed height */
+            width: 100%; /* Full width of the parent/container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive box example using vw, vh */
+        .responsive-box {
+            background-color: #2196F3;
+            color: white;
+            width: 50vw; /* 50% of viewport width */
+            height: 30vh; /* 30% of viewport height */
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Box with min and max width constraints */
+        .constrained-box {
+            background-color: #FF9800;
+            color: white;
+            padding: 20px;
+            min-width: 200px; /* Minimum width */
+            max-width: 80%; /* Maximum width relative to the parent */
+            margin: 20px auto;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header section with full viewport height -->
+    <header class="header">
+        Full Viewport Header (100vh height)
+    </header>
+
+    <!-- Main content area -->
+    <div class="content">
+        <h2>Main Content Area</h2>
+        <p>This content area uses width set in percentage (80% of parent width) with padding and border to demonstrate the CSS box model. The `box-sizing: border-box;` ensures that padding and border are included in the width.</p>
+    </div>
+
+    <!-- Responsive box using viewport units -->
+    <div class="responsive-box">
+        50vw x 30vh Box
+    </div>
+
+    <!-- Box with minimum and maximum width constraints -->
+    <div class="constrained-box">
+        This box has min-width of 200px and max-width of 80%. It prevents the box from being too small or too large.
+    </div>
+
+    <!-- Footer section with fixed height -->
+    <footer class="footer">
+        Fixed Height Footer (60px)
+    </footer>
+
+</body>
+</html>

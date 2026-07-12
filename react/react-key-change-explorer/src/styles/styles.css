@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.demoApp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 50vh;
+    gap: 10px;
+    background-color: rgb(222, 222, 200);
+    border-radius: 20px;               /* Rounded corners */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.counterChildApp{
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 193, 204);
+    border-radius: 20px;               /* Rounded corners */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.para,
+.childCounter{
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+.button{
+    width: 200px;
+    height: 60px;
+    margin: 10px;
+}
+
+.buttonGroup{
+    display: flex;
+    gap: 10px;
+}

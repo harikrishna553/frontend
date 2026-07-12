@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Dropdown</title>
+    <style>
+        /* Navbar container with grid layout */
+        .navbar {
+            display: grid;
+            grid-template-columns: auto 1fr; /* Logo and navigation links */
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            gap: 20px; /* Space between logo and nav-links */
+        }
+
+        /* Logo styling */
+        .logo {
+            color: rgb(255, 255, 0);
+            font-size: 1.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation links container */
+        .nav-links {
+            display: grid;
+            grid-auto-flow: column; /* Horizontally align the links */
+            gap: 20px; /* Space between links */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: right;
+        }
+
+        /* Navigation links */
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 1.1em;
+        }
+
+        /* Hover effect for links */
+        .nav-links li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative; /* Position relative to the parent li */
+        }
+
+        .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%; /* Position below the parent li */
+            left: 0;
+            background-color: #333;
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            min-width: 150px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1; /* Ensure it's above other content */
+        }
+
+        .dropdown-menu li {
+            text-align: left;
+        }
+
+        .dropdown-menu li a {
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #555;
+        }
+
+        /* Hover effect for desktop */
+        @media (min-width: 769px) {
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+        }
+
+        /* For small screens (e.g., mobile phones) */
+        @media (max-width: 600px) {
+            .navbar {
+                grid-template-columns: 1fr; /* Stack items vertically */
+                grid-template-rows: auto auto; /* Add rows for logo and nav-links */
+            }
+
+            .nav-links {
+                grid-auto-flow: row; /* Stack links vertically */
+                gap: 10px; /* Adjust spacing */
+                width: 100%;
+            }
+
+            .dropdown-menu {
+                position: static; /* Change position for mobile */
+                margin: 0; /* Remove margin for mobile */
+                width: 100%; /* Full width */
+                display: none; /* Hidden by default */
+            }
+
+            .dropdown.active .dropdown-menu {
+                display: block; /* Show dropdown on click */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyLogo</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+                <a href="#" aria-haspopup="true" aria-expanded="false">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Service 1</a></li>
+                    <li><a href="#">Service 2</a></li>
+                    <li><a href="#">Service 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // JavaScript to toggle dropdown on click for mobile
+        document.querySelectorAll('.dropdown > a').forEach((dropdownLink) => {
+            dropdownLink.addEventListener('click', (e) => {
+                if (window.innerWidth <= 600) {
+                    e.preventDefault(); // Prevent default link behavior
+                    const dropdown = dropdownLink.parentElement;
+                    dropdown.classList.toggle('active'); // Toggle the dropdown menu visibility
+                }
+            });
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', (e) => {
+            document.querySelectorAll('.dropdown.active').forEach((dropdown) => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

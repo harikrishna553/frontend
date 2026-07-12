@@ -1,0 +1,10 @@
+{
+    "steps": [
+      { "action": "goto", "url": "https://opensource-demo.orangehrmlive.com" },
+      { "action": "fill", "locatorType": "getByPlaceholder", "selector": "Username", "value": "Admin" },
+      { "action": "fill", "locatorType": "getByPlaceholder", "selector": "Password", "value": "admin123" },
+      { "action": "click", "locatorType": "getByRole", "selector": "button", "options": { "type": "submit" } },
+      { "action": "assert", "locatorType": "getByText", "selector": "My Actions", "assertion": "visible" }
+    ]
+  }
+  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 80%; /* Optional: Limit container width */
+    margin: 0 auto;   /* Center container */
+    overflow: hidden; /* Clear floats for the container itself */
+}
+
+.column-left {
+    width: 50%;
+    float: left;
+    background-color: #f0f0f0;
+}
+
+.column-right {
+    width: 50%;
+    float: right;
+    background-color: #e0e0e0;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Optional: Add some basic styles for paragraphs */
+p {
+    margin: 0;
+    padding-right: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column-left">
+            <p>This is the left column. It will take up 50% of the width and float to the left.This is the left column. It will take up 50% of the width and float to the left.This is the left column. It will take up 50% of the width and float to the left.This is the left column. It will take up 50% of the width and float to the left.</p>
+        </div>
+        <div class="column-right">
+            <p>This is the right column. It will take up 50% of the width and float to the right.This is the right column. It will take up 50% of the width and float to the right.This is the right column. It will take up 50% of the width and float to the right.</p>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the floats -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Event Handling Example</title>
+  </head>
+  <body>
+    <p>Css and DOM is fun to learn, Happy Learning........</p>
+
+    <script>
+      window.onload = function () {
+        let para = document.querySelector("p").textContent;
+
+        let msg = `Page loaded successfully!!!!!.\nContent : ${para}`;
+        alert(msg);
+      };
+    </script>
+  </body>
+</html>

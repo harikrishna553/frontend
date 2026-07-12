@@ -1,0 +1,137 @@
+[
+    {
+      "label": "Dashboard",
+      "id": 1,
+      "children": [
+        {
+          "label": "Overview",
+          "id": 101
+        },
+        {
+          "label": "Reports",
+          "id": 102,
+          "children": [
+            {
+              "label": "Monthly",
+              "id": 1021
+            },
+            {
+              "label": "Yearly",
+              "id": 1022,
+              "children": [
+                {
+                  "label": "Financial",
+                  "id": 10221
+                },
+                {
+                  "label": "Employee Performance",
+                  "id": 10222
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Users",
+      "id": 2,
+      "children": [
+        {
+          "label": "User Management",
+          "id": 201,
+          "children": [
+            {
+              "label": "Create User",
+              "id": 2011
+            },
+            {
+              "label": "Edit User",
+              "id": 2012
+            }
+          ]
+        },
+        {
+          "label": "Roles & Permissions",
+          "id": 202,
+          "children": [
+            {
+              "label": "Admin",
+              "id": 2021
+            },
+            {
+              "label": "Editor",
+              "id": 2022
+            },
+            {
+              "label": "Viewer",
+              "id": 2023
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Settings",
+      "id": 3,
+      "children": [
+        {
+          "label": "Account Settings",
+          "id": 301
+        },
+        {
+          "label": "Privacy Settings",
+          "id": 302,
+          "children": [
+            {
+              "label": "Password",
+              "id": 3021
+            },
+            {
+              "label": "Two-Factor Authentication",
+              "id": 3022
+            }
+          ]
+        },
+        {
+          "label": "Notifications",
+          "id": 303,
+          "children": [
+            {
+              "label": "Email Notifications",
+              "id": 3031
+            },
+            {
+              "label": "Push Notifications",
+              "id": 3032
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Help",
+      "id": 4,
+      "children": [
+        {
+          "label": "FAQ",
+          "id": 401
+        },
+        {
+          "label": "Support",
+          "id": 402,
+          "children": [
+            {
+              "label": "Contact Support",
+              "id": 4021
+            },
+            {
+              "label": "Submit Ticket",
+              "id": 4022
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  

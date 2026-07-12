@@ -1,0 +1,35 @@
+/* Menu container */
+.menu {
+  background-color: lightgray;
+  padding: 10px;
+}
+
+/* Menu list - removes bullets and adds horizontal display */
+.menu ul {
+  display: flex; /* Use flexbox for layout */
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  justify-content: space-around; /* Distribute items evenly with space between */
+  background-color: #f8f8f8; /* Light background color */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Menu items */
+.menu ul li {
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Hover effect for menu items */
+.menu ul li:hover {
+  background-color: #575757;
+}
+
+/* Optional: Add some spacing between the menu items */
+.menu ul li + li {
+  margin-left: 15px;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "ios-wdio-appium-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "@wdio/appium-service": "^9.19.2",
+    "@wdio/cli": "^9.19.2",
+    "@wdio/local-runner": "^9.19.2",
+    "@wdio/mocha-framework": "^9.19.2",
+    "@wdio/spec-reporter": "^9.19.2",
+    "appium": "^3.0.1",
+    "appium-xcuitest-driver": "^10.1.0",
+    "expect-webdriverio": "^5.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "webdriverio": "^9.19.2"
+  }
+}

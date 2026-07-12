@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QuerySelectorAll Example</title>
+  </head>
+  <body>
+    <div>
+      <p data-info="data">I have data-info attribute</p>
+    </div>
+
+    <div>
+        <p data-info="data">I too have data-info attribute</p>
+    </div>
+
+    <div>
+        I do not have any data-info attribute
+    </div>
+
+    <br /><br />
+    <button id="querySelectorAllByAttribute">Query Selector by Attribute</button>
+
+    <script>
+      document.getElementById("querySelectorAllByAttribute").onclick = function () {
+        let matchedElements = document.querySelectorAll("[data-info]");
+
+        for (let element of matchedElements) {
+            element.style.border = '3px solid red';
+            element.style.width = "200px";
+        }
+      };
+    </script>
+  </body>
+</html>

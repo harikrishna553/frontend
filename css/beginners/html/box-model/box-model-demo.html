@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model without Box-Sizing</title>
+    <style>
+        .box {
+            width: 300px;    /* Width applies only to the content */
+            padding: 20px;   /* Padding adds space inside the element */
+            border: 10px solid #007BFF;  /* Border around the element */
+            background-color: #f0f8ff;
+            margin-bottom: 20px;  /* Margin outside the element */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Box Model Example</h1>
+
+    <!-- Box demonstrating default behavior (content-box) -->
+    <div class="box">
+        This box is using the default box-sizing behavior.
+        The width of the content area is 300px, and the total width will be larger due to padding and border.
+    </div>
+
+</body>
+</html>

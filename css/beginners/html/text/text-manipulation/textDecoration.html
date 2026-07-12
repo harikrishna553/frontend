@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Decoration Order Example</title>
+    <style>
+        .underline {
+            text-decoration: underline;
+        }
+
+        .overline {
+            text-decoration: overline;
+        }
+
+        .line-through {
+            text-decoration: line-through;
+        }
+
+        .custom-decoration {
+            text-decoration: underline wavy red 6px;
+        }
+
+        p{
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        This is an example of <span class="underline">underlined text</span>,
+        <span class="overline">overlined text</span>,
+        and <span class="line-through">strikethrough text</span>.
+    </p>
+    <p>
+        Here is a more customized decoration: 
+        <span class="custom-decoration">wavy, red, 6px thick underline</span>.
+    </p>
+</body>
+</html>

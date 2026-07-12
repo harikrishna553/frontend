@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-content in CSS Grid</title>
+  <style>
+    h1{
+      font-size: 1.1em;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      gap: 10px;
+      height: 20vh;
+      width: 30vw;
+      border: 2px solid black;
+      margin: 20px;
+    }
+    
+    .start {
+      align-content: start;
+    }
+    
+    .end {
+      align-content: end;
+    }
+    
+    .center {
+      align-content: center;
+    }
+    
+    .stretch {
+      align-content: stretch;
+    }
+
+    .space-between {
+      align-content: space-between;
+    }
+    
+    .space-around {
+      align-content: space-around;
+    }
+    
+    .space-evenly {
+      align-content: space-evenly;
+    }
+
+    .grid-item {
+      background: #4CAF50;
+      color: white;
+      padding: 20px;
+      height: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>align-content: start;</h1>
+  <div class="grid-container start">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+  </div>
+
+  <h1>align-content: end;</h1>
+  <div class="grid-container end">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+  </div>
+
+  <h1>align-content: center;</h1>
+  <div class="grid-container center">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.ratingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.ratingLabel {
+  margin-bottom: 20px;
+  font-size: 1.2rem; /* Increased for visibility */
+  font-weight: bold;
+}
+
+.ratings {
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.ratings:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Lighten background on hover */
+}

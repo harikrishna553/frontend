@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Size Units in CSS</title>
+    <style>
+        /* Absolute Units */
+        .absolute-px { font-size: 16px; }
+        .absolute-pt { font-size: 12pt; }
+        .absolute-cm { font-size: 1cm; }
+        .absolute-mm { font-size: 10mm; }
+        .absolute-in { font-size: 1in; }
+        .absolute-pc { font-size: 12pc; }
+
+        /* Relative Units */
+        .relative-em { font-size: 1.5em; }
+        .relative-rem { font-size: 2rem; }
+        .relative-percent { font-size: 150%; }
+        .relative-vw { font-size: 5vw; }
+        .relative-vh { font-size: 5vh; }
+        .relative-vmin { font-size: 5vmin; }
+        .relative-vmax { font-size: 5vmax; }
+
+        /* Font Size Keywords */
+        .keyword-xx-small { font-size: xx-small; }
+        .keyword-x-small { font-size: x-small; }
+        .keyword-small { font-size: small; }
+        .keyword-medium { font-size: medium; }
+        .keyword-large { font-size: large; }
+        .keyword-x-large { font-size: x-large; }
+        .keyword-xx-large { font-size: xx-large; }
+        .keyword-smaller { font-size: smaller; }
+        .keyword-larger { font-size: larger; }
+
+        /* Fluid Typography */
+        .fluid-typography { font-size: calc(16px + 1vw); }
+
+        /* Clamp Example */
+        .clamp-font-size { font-size: clamp(1rem, 2vw, 2rem); }
+    </style>
+</head>
+<body>
+    <h1>CSS Font Size Units</h1>
+
+    <!-- Absolute Units -->
+    <h2>Absolute Units</h2>
+    <p class="absolute-px">This text is 16px in size (pixels).</p>
+    <p class="absolute-pt">This text is 12pt in size (points).</p>
+    <p class="absolute-cm">This text is 1cm in size (centimeters).</p>
+    <p class="absolute-mm">This text is 10mm in size (millimeters).</p>
+    <p class="absolute-in">This text is 1in in size (inches).</p>
+    <p class="absolute-pc">This text is 12pc in size (picas).</p>
+
+    <!-- Relative Units -->
+    <h2>Relative Units</h2>
+    <p class="relative-em">This text is 1.5em in size (relative to parent element).</p>
+    <p class="relative-rem">This text is 2rem in size (relative to root element).</p>
+    <p class="relative-percent">This text is 150% of the parent element's font size.</p>
+    <p class="relative-vw">This text is 5vw in size (5% of the viewport width).</p>
+    <p class="relative-vh">This text is 5vh in size (5% of the viewport height).</p>
+    <p class="relative-vmin">This text is 5vmin in size (5% of the smaller viewport dimension).</p>
+    <p class="relative-vmax">This text is 5vmax in size (5% of the larger viewport dimension).</p>
+
+    <!-- Font Size Keywords -->
+    <h2>Font Size Keywords</h2>
+    <p class="keyword-xx-small">This text is xx-small.</p>
+    <p class="keyword-x-small">This text is x-small.</p>
+    <p class="keyword-small">This text is small.</p>
+    <p class="keyword-medium">This text is medium.</p>
+    <p class="keyword-large">This text is large.</p>
+    <p class="keyword-x-large">This text is x-large.</p>
+    <p class="keyword-xx-large">This text is xx-large.</p>
+    <p class="keyword-smaller">This text is smaller than its parent.</p>
+    <p class="keyword-larger">This text is larger than its parent.</p>
+
+    <!-- Fluid Typography -->
+    <h2>Fluid Typography</h2>
+    <p class="fluid-typography">This text uses fluid typography with <code>calc(16px + 1vw)</code>.</p>
+
+    <!-- Clamp Example -->
+    <h2>Clamp Font Size</h2>
+    <p class="clamp-font-size">This text uses <code>clamp(1rem, 2vw, 2rem)</code> for responsive font sizing.</p>
+</body>
+</html>

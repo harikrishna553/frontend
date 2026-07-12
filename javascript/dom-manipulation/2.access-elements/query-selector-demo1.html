@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QuerySelector Example</title>
+    <style>
+        p{
+            margin-bottom: 25px;
+        }
+    </style>
+  </head>
+  <body>
+
+    <p id="para1">I am a paragraph with id para1</p>
+
+    <p class="myClass">I am a paragraph with class >myClass</p>
+    <p class="myClass">I am another paragraph with class myClass</p>
+
+    <div>I am first division block</div>
+    <div>I am second division block</div>
+
+    <div>
+        <p>
+            firstName: <input type="text" placeholder="Enter Your FirstName"/>
+        </p>
+
+        <p>
+            lastName: <input type="text" placeholder="Enter Your LastName"/>
+        </p>
+        <p>
+            <input type="submit" value="Login">
+        </p>
+    </div>
+
+    <br><br>
+    <button id="querySelectorById">Query Selector by Id</button>
+    <button id="querySelectorByClass">Query Selector by class</button>
+    <button id="querySelectorByTagName">Query Selector by tag div</button>
+    <button id="querySelectorByAttribute">Query Selector by attribute</button>
+
+    <script>
+      document.getElementById("querySelectorById").onclick = function() {
+        let paragraph = document.querySelector("#para1");
+        paragraph.style.fontWeight = "bold";
+        paragraph.style.color = "darkblue";
+      };
+
+      document.getElementById("querySelectorByClass").onclick = function(){
+        let paragraph = document.querySelector(".myClass");
+        paragraph.style.textDecoration="underline";
+        paragraph.style.border = "1px solid black";
+        paragraph.style.backgroundColor = "lightgreen";
+        paragraph.style.width = "250px";
+      }
+
+      document.getElementById("querySelectorByTagName").onclick = function(){
+        let firstDivTag = document.querySelector("div");
+
+        firstDivTag.style.width = "200px";
+        firstDivTag.style.height = "100px";
+        firstDivTag.style.backgroundColor = "cyan";
+        firstDivTag.style.textAlign = "center";
+        firstDivTag.style.paddingTop = "50px";
+      }
+
+      document.getElementById("querySelectorByAttribute").onclick = function() {
+        let inputEle = document.querySelector("input[type='text']");
+        inputEle.setAttribute("placeholder", "Please Enter Your first name");
+        inputEle.style.backgroundColor = "lightgreen";
+      };
+
+      
+    </script>
+  </body>
+</html>

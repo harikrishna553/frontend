@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .title{
+            background-color: lightgray;
+            color: black;
+            font-size: 25px;
+            margin: 10px;
+            width: 350px;
+        }
+
+        .container-flex-align-stretch {
+            display: flex;
+            height: 250px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 90vw;
+            /* align-items: stretch; */ /* It is the default value */
+            flex-direction: column;
+        }
+
+        .container-flex-align-flex-start {
+            display: flex;
+            height: 250px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 90vw;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .container-flex-align-flex-end {
+            display: flex;
+            height: 250px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 90vw;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+
+        .container-flex-align-center {
+            display: flex;
+            height: 250px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 90vw;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container-flex-align-baseline {
+            display: flex;
+            height: 250px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 90vw;
+            align-items: baseline;
+            flex-direction: column;
+        }
+
+        .item {
+            background-color: deepskyblue;
+            padding: 10px;
+            margin: 10px;
+            height: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .scenario{
+            margin-bottom: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class = "scenario">
+        <h1 class="title">stretch</h1>
+            <div class="container-flex-align-stretch">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+    </div>
+    
+
+    <div class = "scenario">
+        <h1 class="title">flex-start</h1>
+        <div class="container-flex-align-flex-start">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+    </div>
+
+    <div class = "scenario">
+        <h1 class="title">flex-start</h1>
+        <div class="container-flex-align-flex-end">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+    </div>
+
+    <div class = "scenario">
+        <h1 class="title">center</h1>
+        <div class="container-flex-align-center">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+    </div>
+
+    <div class = "scenario">
+        <h1 class="title">baseline</h1>
+        <div class="container-flex-align-baseline">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datalist Example</title>
+</head>
+
+<body>
+    <form action="https://httpbin.org/post" method="POST">
+        <label for="browser">Choose your favorite browser:</label>
+        <input list="browsers" id="browser" name="browser" />
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Edge">
+            <option value="Safari">
+            <option value="Opera">
+        </datalist>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

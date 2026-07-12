@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Position Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+      .header {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        height: 10vh;
+      }
+
+      .sticky {
+        position: sticky; /* Sticky positioning */
+        background-color: #f0d43a; /* Background color when sticky */
+        padding: 10px; /* Padding */
+        font-size: 1.2em; /* Font size */
+        z-index: 1000; /* Ensure it stays above other content */
+      }
+
+      .sticky-top {
+        top: 0; /* Stick to the top of the viewport */
+      }
+
+      .sticky-bottom {
+        bottom: 0; /* Stick to the bottom of the viewport */
+      }
+      .content {
+        padding: 20px;
+        background-color: lightblue; /* Light blue background for content */
+        height: 2000px; /* Large height to enable scrolling */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">Sticky Position Example</div>
+
+    <div class="sticky sticky-top">I am a sticky element Top!</div>
+
+    <div class="content">
+      <p>Scroll down to see how the sticky element behaves.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p>...</p>
+      <!-- Repeat or add more content as necessary -->
+      <p>This is just some placeholder content to illustrate scrolling.</p>
+    </div>
+
+    <div class="sticky sticky-bottom">I am a sticky element Bottom!</div>
+  </body>
+</html>

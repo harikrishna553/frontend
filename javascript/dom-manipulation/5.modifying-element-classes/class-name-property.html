@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ClassName Property Example</title>
+
+    <style>
+        .blackBackground{
+            background-color: black;
+            color: white;
+        }
+
+        .textStyle{
+            font-size: 1.2em;
+            font-weight: bold;
+            border: 1px solid darkblue;
+        }
+
+        .greenBackground{
+            background-color: lightgreen;
+        }
+
+        .box{
+            width : 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+  </head>
+  <body>
+    <p class="">Css and DOM is fun to learn, Happy Learning........</p>
+
+    <button onclick="blackBackground()" id="blackBackground">Apply Black background</button>
+    <button onclick="textStyle()" id="textStyle">Apply text style</button>
+    <button onclick="applyTwoStyles()" id="applyTwoStyles">Apply green background and float to right</button>
+
+    <script>
+      function blackBackground() {
+        document.querySelector("p").className = "blackBackground";
+      }
+
+      function textStyle() {
+        document.querySelector("p").className = "textStyle";
+      }
+
+      function applyTwoStyles() {
+        document.querySelector("p").className = "greenBackground" + " " + "box";
+      }
+
+    </script>
+  </body>
+</html>

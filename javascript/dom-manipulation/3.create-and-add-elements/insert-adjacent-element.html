@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InsertAdjacentElement Example</title>
+  </head>
+  <body>
+    <div>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Grapes</li>
+        </ul>
+    </div>
+
+    <button onclick="beforeBegin()" id="beforeBegin">Before Begin</button>
+    <button onclick="afterBegin()" id="afterBegin">After Begin</button>
+    <button onclick="beforeEnd()" id="beforeEnd">Before End</button>
+    <button onclick="afterEnd()" id="afterEnd">After End</button>
+    
+
+    <script>
+      function beforeBegin() {
+        let ulTag = document.querySelector("ul");
+
+        let heading = document.createElement("h1");
+        heading.textContent = "My Favorite Fruits";
+
+        ulTag.insertAdjacentElement("beforebegin", heading);
+       
+        document.getElementById("beforeBegin").hidden = true;
+      }
+
+      function afterBegin() {
+        let ulTag = document.querySelector("ul");
+
+        let listItem = document.createElement("li");
+        listItem.textContent = "Pine Apple";
+
+        ulTag.insertAdjacentElement("afterbegin", listItem);
+       
+        document.getElementById("afterBegin").hidden = true;
+      }
+
+      function beforeEnd() {
+        let ulTag = document.querySelector("ul");
+
+        let listItem = document.createElement("li");
+        listItem.textContent = "Papaya";
+
+        ulTag.insertAdjacentElement("beforeend", listItem);
+       
+        document.getElementById("beforeEnd").hidden = true;
+      }
+
+      function afterEnd() {
+        let ulTag = document.querySelector("ul");
+
+        let heading = document.createElement("h1");
+        heading.textContent = "I like above fruits a lot........";
+
+        ulTag.insertAdjacentElement("afterend", heading);
+       
+        document.getElementById("afterEnd").hidden = true;
+      }
+    </script>
+  </body>
+</html>

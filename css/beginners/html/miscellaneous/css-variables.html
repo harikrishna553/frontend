@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables</title>
+    <style>
+      :root {
+        --primary-color: #3498db;
+        --font-size: 16px;
+        --font-family: Arial, sans-serif;
+        --background-color: #f0f0f0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+
+        background-color: var(--background-color);
+        font-family: var(--font-family);
+        color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Interactive Elements Example</h1>
+  </body>
+</html>

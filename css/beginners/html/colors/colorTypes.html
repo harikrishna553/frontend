@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Color Representation</title>
+    <style>
+        /* 1. Named Colors */
+        .named-color {
+            background-color: lightcoral;
+            color: white;
+        }
+
+        /* 2. Hexadecimal Notation */
+        .hex-color {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+
+        /* 3. RGB */
+        .rgb-color {
+            background-color: rgb(46, 204, 113);
+            color: rgb(255, 255, 255);
+        }
+
+        /* 4. RGBA */
+        .rgba-color {
+            background-color: rgba(241, 196, 15, 0.7);
+            color: rgba(44, 62, 80, 1);
+        }
+
+        /* 5. HSL */
+        .hsl-color {
+            background-color: hsl(180, 100%, 35%);
+            color: hsl(0, 0%, 100%);
+        }
+
+        /* 6. HSLA */
+        .hsla-color {
+            background-color: hsla(300, 100%, 50%, 0.5);
+            color: hsla(0, 0%, 20%, 1);
+        }
+
+        /* 7. Lab Color */
+        .lab-color {
+            background-color: lab(70% 40 -40);
+            color: lab(10% 20 20);
+        }
+
+        /* 8. LCH Color */
+        .lch-color {
+            background-color: lch(70% 50 200);
+            color: lch(20% 30 340);
+        }
+
+        /* General styling for all boxes */
+        .color-box {
+            padding: 20px;
+            margin: 10px 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Color Representation Examples</h1>
+
+    <div class="color-box named-color">
+        Named Color: lightcoral
+    </div>
+
+    <div class="color-box hex-color">
+        Hexadecimal Notation: #3498db
+    </div>
+
+    <div class="color-box rgb-color">
+        RGB Notation: rgb(46, 204, 113)
+    </div>
+
+    <div class="color-box rgba-color">
+        RGBA Notation: rgba(241, 196, 15, 0.7)
+    </div>
+
+    <div class="color-box hsl-color">
+        HSL Notation: hsl(180, 100%, 35%)
+    </div>
+
+    <div class="color-box hsla-color">
+        HSLA Notation: hsla(300, 100%, 50%, 0.5)
+    </div>
+
+    <div class="color-box lab-color">
+        Lab Color: lab(70% 40 -40)
+    </div>
+
+    <div class="color-box lch-color">
+        LCH Color: lch(70% 50 200)
+    </div>
+
+</body>
+</html>

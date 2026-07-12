@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "label": "Home",
+    "data": "Welcome to the Home Page! Here, you’ll find the latest updates and an overview of what’s happening across our platform."
+  },
+  {
+    "id": 2,
+    "label": "Contact",
+    "data": "This is the Contact Page. Feel free to reach out to us through the provided form, email, or phone for any inquiries or support."
+  },
+  {
+    "id": 3,
+    "label": "About Us",
+    "data": "On the About Us Page, we share our story, mission, and the values that drive our work. Get to know our team and what we stand for!"
+  },
+  {
+    "id": 4,
+    "label": "Services",
+    "data": "This is the Services Page. Discover the wide range of services we offer, from consulting to hands-on support. Find solutions tailored to your needs."
+  },
+  {
+    "id": 5,
+    "label": "FAQ",
+    "data": "Welcome to the FAQ Page! Here, you'll find answers to common questions about our platform, helping you make the most of our services."
+  }
+]

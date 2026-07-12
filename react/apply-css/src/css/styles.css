@@ -1,0 +1,38 @@
+h1 {
+  font-family: "Roboto", sans-serif; /* Clean, modern font */
+  font-size: 2.5rem; /* Adjust for readability */
+  font-weight: 700; /* Bold for emphasis */
+  color: #333; /* Soft black for readability */
+  margin-bottom: 20px; /* Space below the header */
+  text-align: center; /* Center the text */
+  line-height: 1.2; /* Balanced line spacing */
+  letter-spacing: 1px; /* Slightly more spaced letters */
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 300px; /* Underline width */
+  height: 5px; /* Underline thickness */
+  background-color: #ee8abf; /* Accent color for underline */
+  margin: 10px auto; /* Center and space below the underline */
+  border-radius: 2px; /* Smooth edges */
+}
+
+p {
+  font-family: "Open Sans", sans-serif; /* Clean, readable font */
+  font-size: 1.125rem; /* Slightly larger than default */
+  line-height: 1.6; /* Good line spacing for readability */
+  color: #555; /* Soft dark gray for easy reading */
+  margin-bottom: 1.5em; /* Consistent space between paragraphs */
+  max-width: 90vw; /* Limit paragraph width for better readability */
+  text-align: justify; /* Aligns text for a clean, justified look */
+  letter-spacing: 0.5px; /* Slightly spaced letters */
+  margin-left: 30px;
+}
+
+p::first-letter {
+  font-size: 1.5rem; /* Enlarges the first letter */
+  font-weight: bold; /* Emphasizes the first letter */
+  color: #3498db; /* Adds color for a nice accent */
+}

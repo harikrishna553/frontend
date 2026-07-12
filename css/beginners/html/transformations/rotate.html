@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate Example</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            height: 150px;
+            width: 80vw;
+            margin: 30px;
+            border : 2px solid black
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: white;
+            background-color: #333;
+            margin: 20px;
+            position: relative;
+        }
+        
+        .box:nth-child(1) { transform: rotate(-180deg); }
+        .box:nth-child(2) { transform: rotate(135deg); }
+        .box:nth-child(3) { transform: rotate(-45deg); }
+        .box:nth-child(4) { transform: rotate(-90deg); }
+        .box:nth-child(5) { transform: rotate(0deg); }
+        .box:nth-child(6) { transform: rotate(45deg); }
+        .box:nth-child(7) { transform: rotate(90deg); }
+        .box:nth-child(8) { transform: rotate(135deg); }
+        .box:nth-child(9) { transform: rotate(180deg); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" data-angle="-180deg">-180 deg</div>
+        <div class="box" data-angle="135deg">135 deg</div>
+        <div class="box" data-angle="-45deg">-45 deg</div>
+        <div class="box" data-angle="-90deg">-90 deg</div>
+        <div class="box" data-angle="0deg">0 deg</div>
+        <div class="box" data-angle="45deg">45 deg</div>
+        <div class="box" data-angle="90deg">90 deg</div>
+        <div class="box" data-angle="135deg">135 deg</div>
+        <div class="box" data-angle="180deg">180 deg</div>
+    </div>
+</body>
+</html>

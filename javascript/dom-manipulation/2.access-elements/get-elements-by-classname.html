@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GetElementsByClassName Example</title>
+  </head>
+  <body>
+    <div class="class1">I am class1</div>
+    <div class="class2">I am class2</div>
+    <div class="class3">I am class3</div>
+    <div class="class3 class4">I am class3 and class4</div>
+    <div class="class2">I am class2</div>
+    <div class="class1">I am class1</div><br><br>
+
+    <button onclick="updateclass('class1')">class1 style change</button>
+    <button onclick="updateclass('class2')">class2 style change</button>
+    <button onclick="updateclass('class3 class4')">class3, class4 style change</button>
+ 
+    <script>
+      function updateclass(clazz) {
+        let elemenetsMatchedToTheClass = document.getElementsByClassName(clazz);
+        
+        if(elemenetsMatchedToTheClass === null){
+            return
+        }
+
+        for(let ele of elemenetsMatchedToTheClass){
+            ele.style.fontWeight = "bold"
+            ele.style.backgroundColor = 'lightblue';
+            ele.style.border = "1px solid black"
+            ele.style.width = "180px";
+            ele.style.margin = "20px";
+        }
+
+      }
+    </script>
+  </body>
+</html>

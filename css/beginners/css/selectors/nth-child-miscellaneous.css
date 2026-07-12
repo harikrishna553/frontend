@@ -1,0 +1,16 @@
+.item-list li:nth-child(3) {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.item-list li:nth-child(2n + 1) {
+    background-color: lightblue;
+}
+
+.item-list li:nth-child(3n + 2) {
+    background-color: lightgreen;
+}
+
+.item-list li:nth-child(1), .item-list li:nth-child(4) {
+    font-weight: bold;
+}

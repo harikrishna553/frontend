@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optgroup Example</title>
+</head>
+<body>
+  <form action="https://httpbin.org/post" method="POST">
+    <label for="vehicles">Choose a vehicle:</label>
+    <select id="vehicles" name="vehicles">
+      <!-- Group 1: Cars -->
+      <optgroup label="Cars">
+        <option value="volvo">Volvo</option>
+        <option value="bmw">BMW</option>
+        <option value="audi">Audi</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="tesla">Tesla</option>
+      </optgroup>
+
+      <!-- Group 2: Motorcycles -->
+      <optgroup label="Motorcycles">
+        <option value="harley">Harley Davidson</option>
+        <option value="ducati">Ducati</option>
+        <option value="kawasaki">Kawasaki</option>
+        <option value="yamaha">Yamaha</option>
+        <option value="suzuki">Suzuki</option>
+      </optgroup>
+
+    <option value="ford">Ford</option>
+    <option value="chevrolet">Chevrolet</option>
+    <option value="ram">Ram</option>
+    <option value="gmc">GMC</option>
+    <option value="toyota">Toyota</option>
+
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

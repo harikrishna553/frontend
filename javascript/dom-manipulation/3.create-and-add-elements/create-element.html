@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CreateElement Example</title>
+  </head>
+  <body>
+
+    <p id="para1">This is a paragraph1.</p>
+
+    <div id="divToExperiment">
+
+    </div>
+
+    <button onclick="addNewParagraph()">Add New Paragraph</button>
+
+    <script>
+      var count = 2;
+      function addNewParagraph() {
+        let divTag = document.getElementById("divToExperiment");
+
+        let paragraph = document.createElement("p");
+        paragraph.textContent = "I am paragraph" + count;
+        paragraph.style.fontWeight = "bold";
+        paragraph.style.backgroundColor = "lightblue";
+
+        divTag.appendChild(paragraph);
+        count++;
+      }
+    </script>
+  </body>
+</html>

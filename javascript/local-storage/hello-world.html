@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Storage Hello World</title>
+    <link rel="stylesheet" href="hello-world.css" />
+    <script>
+      function saveToLocalStorage(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const userId = document.getElementById("userId").value;
+        const username = document.getElementById("username").value;
+        const age = document.getElementById("age").value;
+
+        // Basic validation
+        if (!userId || !username || isNaN(age)) {
+          alert("Please fill out all fields correctly.");
+          return;
+        }
+
+        const user = {
+          id: userId,
+          name: username,
+          age: age,
+        };
+
+        localStorage.setItem(userId.toString(), JSON.stringify(user));
+        console.log(`User added: ${JSON.stringify(user)}`);
+
+        alert("User added successfully!");
+        // Clear the form after submission
+        document.getElementById("userId").value = "";
+        document.getElementById("username").value = "";
+        document.getElementById("age").value = "";
+      }
+
+      function getFromLocalStorage() {
+        const userId = document.getElementById("userIdToRetrieve").value;
+        const userJson = localStorage.getItem(userId.toString());
+
+        if (!userJson) {
+          document.getElementById("userDetails").innerHTML = `
+            <h3 id="notFound">User Not Found for the ID: ${userId}</h3>`;
+          return;
+        }
+
+        const user = JSON.parse(userJson);
+
+        document.getElementById("userDetails").innerHTML = `
+            <h3>User Details:</h3>
+            <ul> 
+              <li>Id: ${user.id}</li>
+              <li>Name: ${user.name}</li>
+              <li>Age: ${user.age}</li>
+            </ul>`;
+      }
+    </script>
+  </head>
+
+  <body>
+    <form onsubmit="saveToLocalStorage(event)">
+      <h3>Fill the details to add the user to local storage</h3>
+
+      <p>
+        <label for="userId">Enter UserId</label>
+        <input type="text" id="userId" placeholder="Enter Your Id" />
+      </p>
+
+      <p>
+        <label for="username">Enter Username</label>
+        <input type="text" id="username" placeholder="Enter Your Name" />
+      </p>
+
+      <p>
+        <label for="age">Enter Age</label>
+        <input type="text" id="age" placeholder="Enter Your Age" />
+      </p>
+
+      <p>
+        <button type="submit">Add User</button>
+      </p>
+    </form>
+
+    <div class="retrieve-section">
+      <h3>Retrieve User by ID</h3>
+      <input type="text" placeholder="Enter User ID" id="userIdToRetrieve" />
+      <button onclick="getFromLocalStorage()">Get User Details</button>
+    </div>
+
+    <span id="userDetails"></span>
+  </body>
+</html>

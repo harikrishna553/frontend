@@ -1,0 +1,89 @@
+{
+  "type": "Topology",
+  "objects": {
+    "regions": {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Polygon",
+          "properties": {
+            "region": "North America",
+            "product_sales": {
+              "Apple iPhone 14": 12,
+              "Samsung Galaxy S23": 18,
+              "Google Pixel 8": 9,
+              "OnePlus 11": 6
+            }
+          },
+          "coordinates": [[[-125, 24], [-66, 24], [-66, 49], [-125, 49], [-125, 24]]]
+        },
+        {
+          "type": "Polygon",
+          "properties": {
+            "region": "Europe",
+            "product_sales": {
+              "Apple iPhone 14": 15,
+              "Samsung Galaxy S23": 20,
+              "Google Pixel 8": 8,
+              "OnePlus 11": 5
+            }
+          },
+          "coordinates": [[[-10, 35], [40, 35], [40, 70], [-10, 70], [-10, 35]]]
+        },
+        {
+          "type": "Polygon",
+          "properties": {
+            "region": "Asia",
+            "product_sales": {
+              "Apple iPhone 14": 22,
+              "Samsung Galaxy S23": 30,
+              "Google Pixel 8": 11,
+              "OnePlus 11": 13
+            }
+          },
+          "coordinates": [[[60, 10], [180, 10], [180, 80], [60, 80], [60, 10]]]
+        },
+        {
+          "type": "Polygon",
+          "properties": {
+            "region": "South America",
+            "product_sales": {
+              "Apple iPhone 14": 10,
+              "Samsung Galaxy S23": 17,
+              "Google Pixel 8": 7,
+              "OnePlus 11": 4
+            }
+          },
+          "coordinates": [[[-80, -60], [-30, -60], [-30, 10], [-80, 10], [-80, -60]]]
+        },
+        {
+          "type": "Polygon",
+          "properties": {
+            "region": "Africa",
+            "product_sales": {
+              "Apple iPhone 14": 5,
+              "Samsung Galaxy S23": 12,
+              "Google Pixel 8": 6,
+              "OnePlus 11": 3
+            }
+          },
+          "coordinates": [[[-20, -40], [50, -40], [50, 40], [-20, 40], [-20, -40]]]
+        },
+        {
+          "type": "Polygon",
+          "properties": {
+            "region": "Oceania",
+            "product_sales": {
+              "Apple iPhone 14": 8,
+              "Samsung Galaxy S23": 14,
+              "Google Pixel 8": 5,
+              "OnePlus 11": 2
+            }
+          },
+          "coordinates": [[[110, -50], [155, -50], [155, -30], [110, -30], [110, -50]]]
+        }
+      ]
+    }
+  },
+  "arcs": []
+}
