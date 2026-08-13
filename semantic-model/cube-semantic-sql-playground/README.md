@@ -518,5 +518,3 @@ MIT License - feel free to use this project for learning and development.
 For issues, questions, or feature requests, please open an issue on GitHub.
 
 ---
-
-**Happy coding!** 🚀
